@@ -71,7 +71,7 @@ nav {
 header {
   position: relative;
   text-align: center;
-  background: #f3f3f3 url(//127.0.0.1/desktop/dxz/img/head.png) no-repeat top center;
+  background: #f3f3f3 url(./img/head.png) no-repeat top center;
   -webkit-background-size: auto 100%;
           background-size: auto 100%;
 }
