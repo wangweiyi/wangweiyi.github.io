@@ -1,0 +1,238 @@
+/**
+ * @fileoverview 大雪子 - 首页样式表
+ * @author WangWeiyi
+ * @date 2016-03-17
+ */
+@bgGray: #f3f3f3;
+@borderGray: #f7f7f7;
+@colorGray: #777;
+
+@navBg: #272727;
+@contactBg: #232323;
+@colorBlack: #333;
+
+@orange: #ff9947;
+@white: #fff;
+
+@fontYahei: 'Microsoft Yahei';
+@fontArial: 'Arial';
+
+@screenLgWidth: 1300px;
+@contentLgWidth: 1170px;
+
+@screenMidWidth: 1090px;
+@contentMidWidth: 970px;
+
+@screenSmWidth: 770px;
+@contentSmWidth: 750px;
+
+@contentXsWidth: 99%;
+
+@navWidth: 240px;
+@navXsWidth: 50%;
+
+
+.horizontal-center() {
+	margin-left: auto;
+	margin-right: auto;
+}
+.clearfix() {
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+		visibility: hidden;
+		height: 0;
+	}
+}
+
+
+@media screen and (min-width: @screenLgWidth) {
+	.content {
+		width: @contentLgWidth;
+	}
+}
+@media screen and (min-width: @screenMidWidth) and (max-width: @screenLgWidth) {
+	.content {
+		width: @contentMidWidth;
+	}
+}
+@media screen and (min-width: @screenSmWidth) and (max-width: @screenMidWidth) {
+	.content {
+		width: @contentSmWidth;
+	}
+}
+@media screen and (max-width: @screenSmWidth) {
+	.content {
+		width: @contentXsWidth;
+	}
+	nav {
+		width: @navXsWidth !important;
+	}
+}
+
+/* common style*/
+header, footer, p, div, h1, h2, h3, ul, li {
+	box-sizing: border-box;
+}
+
+.content {
+	height: 100%;
+	.horizontal-center;
+	padding: 100px 0;
+	text-align: center;
+}
+
+h2, h3 {
+	font: 22px/1.5 @fontYahei;
+	color: @colorBlack;
+}
+h2 {
+	font-weight: bold;
+}
+p {
+	font: 12px/2 @fontYahei;
+	color: @colorGray;
+}
+
+nav {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	width: @navWidth;
+	height: 500px;
+	background-color: @navBg;
+}
+
+header {
+	position: relative;
+	text-align: center;
+	background: @bgGray url(./img/head.png) no-repeat top center;
+	background-size: auto 100%;
+
+	.nav-trigger {
+		position: absolute;
+		left: 60px;
+		top: 60px;
+		width: 20px;
+		height: 3px;
+		background: @orange;
+		box-shadow: 0 8px @orange;
+		cursor: pointer;
+
+		&:after {
+			position: absolute;
+			left: 0;
+			top: 16px;
+			content: '';
+			
+			width: 75%;
+			height: 100%;
+			background: @orange;
+		}
+	}
+
+	.brand {
+		position: absolute;
+		top: 45%;
+		left: 0;
+		width: 100%;
+		color: @orange;
+	}
+
+	h1 {
+		margin-top: -.5em;
+		margin-bottom: 22px;
+		font: bold 120px/1 @fontArial;
+	}
+
+	.about-trigger {
+		display: inline-block;
+		padding: 0 24px;
+		font: 14px/32px @fontYahei;
+		color: @orange;
+		border: 1px solid @orange;
+		text-decoration: none;
+
+		&:link, &:visited, &:hover, &:active {
+			text-decoration: none;
+		}
+
+		&:hover {
+			color: @white;
+			background: @orange;
+		}
+	}
+}
+
+.icon-work {
+	display: inline-block;
+	width: 112px;
+	height: 109px;
+	margin-top: 32px;
+	margin-bottom: 10px;
+}
+.work-list {
+	margin-top: 47px;
+	.clearfix;
+
+	li {
+		float: left;
+		width: 25%;
+	}
+
+	.icon-work-item {
+		margin-bottom: 15px;
+	}
+}
+
+.responsive-design {
+	background: @bgGray;
+
+	img {
+		display: inline-block;
+		width: 760px;
+		height: 426px;
+		margin-top: 40px - 6px;
+	}
+}
+
+.update-list {
+	margin-top: 66px; //90 - 6 -18
+	.clearfix;
+
+	.update-item {
+		float: left;
+		width: 279px;
+		height: 279px;
+		margin-top: 18px;
+		margin-right: 18px;
+		background: @bgGray;
+
+		&.last {
+			margin-right: 0;
+		}
+	}
+}
+
+.contact {
+	background: @contactBg;
+
+	h2, h3, p {
+		color: @white;
+	}
+	h3 {
+		margin-top: 50px;
+		font-family: @fontArial;
+	}
+}
+
+footer {
+	padding-top: 20px;
+	height: 120px;
+	text-align: center;
+}
+
+
