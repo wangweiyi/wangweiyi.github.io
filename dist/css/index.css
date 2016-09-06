@@ -1,0 +1,184 @@
+/* horizontal center */
+* {
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+  margin-left: 240px;
+  text-align: center;
+  color: #333;
+  font: 12px/1.5 'Microsoft Yahei';
+}
+.container nav {
+  position: absolute;
+  left: -240px;
+  top: 0;
+  padding: 200px 0 0 60px;
+  width: 240px;
+  height: 100%;
+  text-align: left;
+  background: #272727;
+}
+.container nav .close {
+  position: absolute;
+  top: 100px;
+  left: 60px;
+  font-size: 40px;
+  color: #777;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.container nav .close:hover {
+  color: #fff;
+}
+.container nav li {
+  margin-bottom: 50px;
+}
+.container nav a {
+  position: relative;
+  padding-bottom: 3px;
+  color: #777;
+  text-decoration: none;
+}
+.container nav a,
+.container nav a span {
+  display: block;
+}
+.container nav a span {
+  font-size: 8px;
+  font-family: 'Arial';
+}
+.container nav a:before,
+.container nav a:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 40px;
+  background: #777;
+}
+.container nav a:after {
+  opacity: 0;
+  width: 0;
+  background: #fff;
+  transition: width .2s;
+}
+.container nav a.active {
+  color: #fff;
+}
+.container nav a.active:before {
+  background: #fff;
+}
+.container nav a:not(.active):hover {
+  color: #fff;
+}
+.container nav a:not(.active):hover:before {
+  opacity: 0;
+}
+.container nav a:not(.active):hover:after {
+  opacity: 1;
+  width: 90px;
+}
+.container header {
+  position: relative;
+  height: 500px;
+  color: #fff;
+  background: #2e2e2e url(../img/head.png?v=eIPl%2B8MViwVVdmerLjZ7HQ%3D%3D) no-repeat center bottom;
+  background-size: auto 90%;
+}
+.container header .btn {
+  display: inline-block;
+  margin-top: 40px;
+  width: 120px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #fff;
+  border: 1px solid;
+}
+.container header .btn:hover {
+  color: #333;
+  background: #fff;
+  cursor: pointer;
+}
+.container header .main {
+  position: relative;
+  top: 45%;
+  margin-top: -45px;
+}
+.container header .main h1 {
+  height: 90px;
+  text-indent: -999999em;
+  background: url(../img/daxuezi.png?v=08%2Fa%2BLYZOqiKwuqgKFhVbg%3D%3D) no-repeat center top;
+}
+.container header .about {
+  display: none;
+  height: 100%;
+}
+.container section {
+  padding: 100px 0;
+}
+.container section .content {
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container section h1 {
+  font-size: 22px;
+  line-height: 1.8;
+}
+.container section h2 {
+  font-size: 12px;
+  font-weight: normal;
+  color: #777;
+}
+.container section ul:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.container section li {
+  float: left;
+  width: 25%;
+}
+.container section.work hgroup {
+  margin-bottom: 50px;
+}
+.container section.work .title {
+  margin-top: .7em;
+  font-size: 22px;
+}
+.container section.responsive {
+  background: #f5f6f7;
+}
+.container section.responsive hgroup {
+  margin-bottom: 40px;
+}
+.container section.update hgroup {
+  margin-bottom: 90px;
+}
+.container section.update li {
+  width: 279px;
+  height: 279px;
+  margin-right: 18px;
+  background: #f5f6f7;
+}
+.container section.update li.last {
+  margin-right: 0;
+}
+.container section.contact {
+  font-size: 22px;
+  background: #2e2e2e;
+}
+.container section.contact hgroup {
+  margin-bottom: 60px;
+}
+.container section.contact,
+.container section.contact h2 {
+  color: #fff;
+}
+.container footer {
+  padding-top: 20px;
+  height: 120px;
+  color: #aaa;
+}

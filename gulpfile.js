@@ -8,21 +8,29 @@ var gulp = require('gulp'), //本地安装gulp所用到的地方
     htmlmin = require('gulp-htmlmin'),
     concat = require("gulp-concat"),
 	imagemin = require('gulp-imagemin'),
-	pngquant = require('imagemin-pngquant'); // 安装： $ npm i -D imagemin-pngquant
+	pngquant = require('imagemin-pngquant'), // 安装： $ npm i -D imagemin-pngquant
+	jshint = require('gulp-jshint'); 
 
 // cmopile and minify less
 gulp.task('less-to-css', function() {
-    gulp.src('src/**/*.less') //该任务针对的文件
+    return gulp.src('src/**/*.less') //该任务针对的文件
         .pipe(less()) //该任务调用的模块
         .pipe(cssver()) //给css文件里引用文件加版本号（文件MD5）
-        .pipe(cssmin())
+        // .pipe(cssmin())
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('minify-css', function() { //将src目录下的css压缩至dist目录
+    return gulp.src('src/**/*.css') // 要压缩的css文件
+        .pipe(cssver()) //给css文件里引用文件加版本号（文件MD5）
+        // .pipe(cssmin())
         .pipe(gulp.dest('dist'));
 });
 
 gulp.task('minify-js', function() {
-    gulp.src('src/**/*.js') // 要压缩的js文件
-        .pipe(uglify())
-        .pipe(gulp.dest('dist')); //压缩后的路径
+    return gulp.src('src/**/*.js') // 要压缩的js文件
+        // .pipe(uglify())
+        .pipe(gulp.dest('dist')); 
 });
 
 gulp.task('minify-html', function() {
@@ -40,13 +48,13 @@ gulp.task('minify-html', function() {
         minifyJS: true, //压缩页面JS
         minifyCSS: true //压缩页面CSS
     };
-    gulp.src('src/**/*.html')
-        .pipe(htmlmin(options))
+    return gulp.src('src/**/*.html')
+        // .pipe(htmlmin(options))
         .pipe(gulp.dest('dist'));
 });
 
 gulp.task('minify-img', function() {
-    gulp.src('src/**/*')
+    return gulp.src('src/**/img/*')
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [
@@ -66,13 +74,13 @@ gulp.task('minify-img', function() {
 // });
 
 // add '.min' subffix to compressed files' filename
-gulp.task('rename', function() {
-    gulp.src('js/jquery.js')
-        .pipe(uglify()) //压缩
-        //会将jquery.js重命名为jquery.min.js
-        .pipe(rename('jquery.min.js'))
-        .pipe(gulp.dest('js'));
-});
+// gulp.task('rename', function() {
+//     gulp.src('js/jquery.js')
+//         .pipe(uglify()) //压缩
+//         //会将jquery.js重命名为jquery.min.js
+//         .pipe(rename('jquery.min.js'))
+//         .pipe(gulp.dest('js'));
+// });
 
 // watch file change
 gulp.task('watch', function() {
@@ -82,4 +90,13 @@ gulp.task('watch', function() {
     gulp.watch('src/**/img/*', ['minify-img']);
 });
 
-gulp.task('default', ['less-to-css', 'minify-js', 'minify-html', 'minify-img', 'watch']);
+// check js error
+// gulp.task('lint', function() {
+//   gulp.src('src/**/*.js')
+//     .pipe(jshint())
+//     .pipe(jshint.reporter('js error'));
+// });
+
+gulp.task('default', ['less-to-css', 'minify-css', 'minify-js', 'minify-html', 'minify-img', 'watch'], function() {
+	console.log('Compile finished!');
+});

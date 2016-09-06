@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>大雪子</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="container">
+		<nav>
+			<div id="hideNav" class="close">+</div>
+			<ul>
+				<li>
+					<a class="active" href="#">首页<span>HOME</span></a>
+				</li>
+				<li>
+					<a href="#">悠闲小作<span>WORK</span></a>
+				</li>
+				<li>
+					<a href="#">经验分享<span>EXPERIENCE</span></a>
+				</li>
+				<li>
+					<a href="#">摄影<span>PHOTOGRAPH</span></a>
+				</li>
+			</ul>
+		</nav>
+		<header>
+			<div id="showNav" class="nav-trigger" role="button"></div>
+			<div class="main">
+				<h1>DAXUEZI</h1>
+				<div id="showAbout" class="btn" role="button">关于我</div>
+			</div>
+			<div class="about">
+				<div class="about-content">
+					<img class="avator" src="img/avator.png" alt="大雪子头像" />
+					<p class="name">大雪子</p>
+					<p class="self-intro">你好，我是大雪子，姥姥从小这么叫我，大家也这么叫我，我喜欢这名<br>字。外表普通，人品五五开，虽然坏事不敢做但也没有勇气扶老太太过<br>马路。互联网圈内漂泊数载，历久弥坚，练就八字奥义“云淡风轻，处<br>事不惊”。 兴趣很多，志向不大，设计是一条路，希望自己走的长远，	<br>保持乐观顺其自然。</p>
+					<div id="hideAbout" class="btn" role="button">返回</div>
+				</div>
+			</div>
+		</header>
+		<section class="work">
+			<div class="content">
+				<hgroup>
+					<h1>我在做什么</h1>
+					<h2>这事儿连我爸妈都不清楚</h2>
+				</hgroup>
+				<ul>
+					<li>
+						<img src="img/icon_web_design.png" alt="">
+						<p class="title">WEB设计</p>
+						<p>设计并整合功能交互</p>
+					</li>
+					<li>
+						<img src="img/icon_ui_design.png" alt="">
+						<p class="title">UI设计</p>
+						<p>APP界面视觉统一  关注细节</p>
+					</li>
+					<li>
+						<img src="img/icon_creative_dev.png" alt="">
+						<p class="title">创意开发</p>
+						<p>提供有意思的 很酷的想法</p>
+					</li>
+					<li>
+						<img src="img/icon_vi_design.png" alt="">
+						<p class="title">VI设计</p>
+						<p>公司企业文化产品周边设计</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="responsive">
+			<div class="content">
+				<hgroup>
+					<h1>响应式布局网站</h1>
+					<h2>支持更多设备浏览</h2>
+				</hgroup>
+				<img src="img/responsive.png" alt="响应式布局示意图">
+			</div>
+		</section>
+		<section class="update">
+			<div class="content">
+				<hgroup>
+					<h1>最新更新</h1>
+					<h2>持续更新</h2>
+				</hgroup>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li class="last"></li>
+				</ul>
+			</div>
+		</section>
+		<section class="contact">
+			<div class="content">
+				<hgroup>
+					<h1>我的邮箱</h1>
+					<h2>欢迎交流沟通</h2>
+				</hgroup>
+				<p class="email">XUEZICOOL@163.COM</p>
+			</div>
+		</section>
+		<footer>&copy; 2016 daxuezi.com 版权所有</footer>
+	</div>
+	<script type="text/javascript" src="lib/seajs/dist/sea.js"></script>
+	<script type="text/javascript">
+		// seajs 的简单配置
+		seajs.config({
+		  base: ".",
+		  alias: {
+		    "jquery": "lib/jquery/dist/jquery.js"
+		  }
+		});
+		// 加载入口模块
+		seajs.use("js/index");
+	</script>
+</body>
+</html>
