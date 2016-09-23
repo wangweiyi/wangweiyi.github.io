@@ -10038,18 +10038,12 @@ jQuery.parseJSON = JSON.parse;
 // 	} );
 // }
 
-if ( typeof module === "object" && module && typeof module.exports === "object" ) {
-	console.log(1)
-    module.exports = jQuery;
-
-} else if ( typeof define === "function" && define.amd ) {
-	console.log(2)
+if ( typeof define === "function") {
 	define( "jquery", [], function() {
 		return jQuery;
 	});
 }
 if ( typeof window === "object" && typeof window.document === "object" ) {
-	console.log(3)
     window.jQuery = window.$ = jQuery;
 }
 

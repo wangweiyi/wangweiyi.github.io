@@ -2,44 +2,53 @@
 <html lang="zh">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
 	<title>大雪子</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-	<div class="container">
-		<nav>
-			<div id="hideNav" class="close">+</div>
-			<ul>
-				<li>
-					<a class="active" href="#">首页<span>HOME</span></a>
-				</li>
-				<li>
-					<a href="#">悠闲小作<span>WORK</span></a>
-				</li>
-				<li>
-					<a href="#">经验分享<span>EXPERIENCE</span></a>
-				</li>
-				<li>
-					<a href="#">摄影<span>PHOTOGRAPH</span></a>
-				</li>
-			</ul>
-		</nav>
-		<header>
-			<div id="showNav" class="nav-trigger" role="button"></div>
-			<div class="main">
-				<h1>DAXUEZI</h1>
-				<div id="showAbout" class="btn" role="button">关于我</div>
+	<!-- 导航栏 -->
+	<nav>
+		<ul>
+			<li>
+				<a class="active" href="#">首页<span>HOME</span></a>
+			</li>
+			<li>
+				<a href="#">悠闲小作<span>WORK</span></a>
+			</li>
+			<li>
+				<a href="#">经验分享<span>EXPERIENCE</span></a>
+			</li>
+			<li>
+				<a href="#">摄影<span>PHOTOGRAPH</span></a>
+			</li>
+		</ul>
+	</nav>
+	<!-- 导航栏开关-->
+	<div id="navSwitch" class="nav-switch" role="botton"></div>
+	
+	<!-- 网页主体 -->
+	<div id="container" class="container">
+		<!-- 头部 -->
+		<header id="siteHeader" class="site-header">
+			<div class="slogon">
+				<div class="slogon-content">
+					<h1>DAXUEZI</h1>
+					<div id="aboutBtn" class="btn" role="button">关于我</div>	
+				</div>
 			</div>
 			<div class="about">
 				<div class="about-content">
 					<img class="avator" src="img/avator.png" alt="大雪子头像" />
-					<p class="name">大雪子</p>
-					<p class="self-intro">你好，我是大雪子，姥姥从小这么叫我，大家也这么叫我，我喜欢这名<br>字。外表普通，人品五五开，虽然坏事不敢做但也没有勇气扶老太太过<br>马路。互联网圈内漂泊数载，历久弥坚，练就八字奥义“云淡风轻，处<br>事不惊”。 兴趣很多，志向不大，设计是一条路，希望自己走的长远，	<br>保持乐观顺其自然。</p>
-					<div id="hideAbout" class="btn" role="button">返回</div>
+					<p class="my-name">大雪子</p>
+					<p class="self-intro">你好，我是大雪子，姥姥从小这么叫我，大家也这么叫我，我喜欢这名字。外表普通，人品五五开，虽然坏事不敢做但也没有勇气扶老太太过马路。互联网圈内漂泊数载，历久弥坚，练就八字奥义“云淡风轻，处事不惊”。兴趣很多，志向不大，设计是一条路，希望自己走的长远，保持乐观顺其自然。</p>
+					<div id="backBtn" class="btn" role="button">返回</div>
 				</div>
 			</div>
 		</header>
+		
+		<!-- 区块：我在做什么 -->
 		<section class="work">
 			<div class="content">
 				<hgroup>
@@ -70,6 +79,8 @@
 				</ul>
 			</div>
 		</section>
+
+		<!-- 区块：响应式布局 -->
 		<section class="responsive">
 			<div class="content">
 				<hgroup>
@@ -79,20 +90,24 @@
 				<img src="img/responsive.png" alt="响应式布局示意图">
 			</div>
 		</section>
-		<section class="update">
+		
+		<!-- 区块：最新更新 -->
+		<section class="list list-update">
 			<div class="content">
 				<hgroup>
 					<h1>最新更新</h1>
 					<h2>持续更新</h2>
 				</hgroup>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li class="last"></li>
+					<li class="list-item"><a href="#">内容</a></li>
+					<li class="list-item"><a href="#">内容</a></li>
+					<li class="list-item"><a href="#">内容</a></li>
+					<li class="list-item"><a href="#">内容</a></li>
 				</ul>
 			</div>
 		</section>
+
+		<!-- 区块：我的邮箱 -->
 		<section class="contact">
 			<div class="content">
 				<hgroup>
@@ -102,6 +117,8 @@
 				<p class="email">XUEZICOOL@163.COM</p>
 			</div>
 		</section>
+
+		<!-- 页脚 -->
 		<footer>&copy; 2016 daxuezi.com 版权所有</footer>
 	</div>
 	<script type="text/javascript" src="lib/seajs/dist/sea.js"></script>

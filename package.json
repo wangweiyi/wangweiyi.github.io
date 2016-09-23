@@ -22,6 +22,7 @@
   "homepage": "https://github.com/wangweiyi/wangweiyi.github.io#readme",
   "devDependencies": {
     "bower": "^1.7.9",
+    "ftl-node": "^1.7.6",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-htmlmin": "^1.3.0",

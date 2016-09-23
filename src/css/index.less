@@ -1,188 +1,20 @@
-@bgBlack: #2e2e2e;
-@bgNav: #272727;
-@bgLightGray: #f5f6f7;
+@import "./units/mixin.less";
+@import "./units/variable.less";
+@import "./units/base.less";
 
-@colorBlack: #333;
-@colorGray: #777;
-@colorLigthGray: #aaa;
-@colorWhite: #fff;
-
-@ffZh: 'Microsoft Yahei';
-@ffEn: 'Arial';
-@fzTitle: 22px;
-@fzTextBig: 14px;
-@fzText: 12px;
-@fzTextSmall: 8px;
-
-.clearfix() {
-	&:after {
-		display: block;
-		content: '';
-		clear: both;
-	}
-}
-.hide-seo-text() {
-	text-indent: -999999em;
-}
-.hand() {
-	cursor: pointer;
-}
-
-.fl() {
-	float: left;
-}
-.fr() {
-	float: right;
-}
-.dn() {
-	display: none;
-}
-.db() {
-	display: block;
-}
-.di() {
-	display: inline-block;
-}
-.dt() {
-	display: table;
-}
-.dtc() {
-	display: table-cell;
-}
-.pr() {
-	position: relative;
-}
-.pa() {
-	position: absolute;
-}
-.ps() {
-	position: static;
-}
-.pf() {
-	position: fixed;
-}
-.tac() {
-	text-align: center;
-}
-.tal() {
-	text-align: left;
-}
-.tar() {
-	text-align: right;
-}
-.fwb() {
-	font-weight: bold;
-}
-.fwn() {
-	font-weight: normal;
-}
-.lh(@value) {
-	line-height: @value;
-}
-/* horizontal center */
-.hc(@width:auto) {
-	width: @width;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-
-* {
-	box-sizing: border-box;
-}
+//页面主体
 .container {
-	.pr;
-	margin-left: 240px;
-	.tac;
-	color: @colorBlack;
-	font: @fzText/1.5 @ffZh;
 
-	nav {
-		@width: 240px;
-		.pa;
-		left: -@width;
-		top: 0;
-		padding: 200px 0 0 60px;
-		width: @width;
-		height: 100%;
-		.tal;
-		background: @bgNav;
-
-		.close {
-			.pa;
-			top: 100px;
-			left: 60px;
-			font-size: 40px;
-			color: @colorGray;
-			transform: rotate(45deg);
-			.hand;
-
-			&:hover {
-				color: @colorWhite;
-			}
-		}
-		li {
-			margin-bottom: 50px;
-		}	
-		a {
-			.pr;
-			padding-bottom: 3px;
-			color: @colorGray;
-			text-decoration: none;
-
-			&, & span {
-				.db;
-			}
-
-			span {
-				font-size: @fzTextSmall;
-				font-family: @ffEn;
-			}
-
-			&:before, &:after {
-				content: '';
-				.pa;
-				left: 0;
-				bottom: 0;
-				height: 1px;
-				width: 40px;
-				background: @colorGray;
-			}
-			&:after {
-				opacity: 0;
-				width: 0;
-				background: @colorWhite;
-				transition: width .2s;
-			}
-
-			&.active {
-				color: @colorWhite;
-				&:before {
-					background: @colorWhite;
-				}
-			}
-			&:not(.active):hover {
-				color: @colorWhite;
-				&:before {
-					opacity: 0;
-				}
-				&:after {
-					opacity: 1;
-					width: 90px;
-				}
-			}
-		}
-
-	}
-	
-	header {
+	//页面主体头部
+	.site-header {
 		.pr;
 		height: 500px;
 		color: @colorWhite;
 		background: @bgBlack url(../img/head.png) no-repeat center bottom;
 		background-size: auto 90%;
+		overflow: hidden;
 
-		
+		//关于我按钮 和 返回按钮
 		.btn {
 			.di;
 			margin-top: 40px;
@@ -198,50 +30,64 @@
 				.hand();
 			}
 		}
-
-		.main {
-			@height: 90px;
+		//DAXUEZI
+		.slogon {
+			.absolute-full;
+			.anim;
+		}
+		.slogon-content {
 			.pr;
-			top: 45%;
-			margin-top: -@height/2;
+			top: 42%;
 
 			h1 {
-				height: @height;
+				height: 90px;
 				.hide-seo-text;
 				background: url(../img/daxuezi.png) no-repeat center top;
+
+				@media screen and (max-width: 600px) {
+					background-size: 80% auto;
+				}	
+			}
+		}
+		//关于我
+		.about {
+			.dt;
+			.absolute-full;
+			background: @bgBlack;
+			transform: translateY(100%);
+			.anim;
+		}
+		.about-content {
+			.dtc;
+			vertical-align: middle;
+		}
+		//关于我 之 自我介绍
+		.self-intro {
+			.hc(30em);
+			.my-name {
+				margin: 8px 0;
+				font-size: @fzTitleSm;
+			}
+			//平板及手机上, 内容宽度为屏幕宽度的80%, 居中
+			@media screen and (max-width: @screenPadMax) {
+				.hc(80%);
 			}
 		}
 
-		.about {
-			.dn;
-			height: 100%;
+		//查看关于我
+		&.view-about {
+			.slogon {
+				transform: translateY(-100%);
+			}
+			.about {
+				transform: translateY(0);
+			}
 		}
 	}
 	
+	//区块
 	section {
-		padding: 100px 0;
-
-		.content {
-			.hc(1170px);
-		}
-
-		h1 {
-			font-size: @fzTitle;
-			.lh(1.8);
-		}
-		h2 {
-			font-size: @fzText;
-			.fwn;
-			color: @colorGray;
-		}
-		ul {
-			.clearfix;
-		}
-		li {
-			.fl;
-			width: 25%;
-		}
-
+		//模块: 我在做什么
 		&.work {
 			hgroup {
 				margin-bottom: 50px;
@@ -250,34 +96,65 @@
 				margin-top: .7em;
 				font-size: @fzTitle;
 			}
+
+			ul {
+				margin-bottom: -50px;
+				li {
+					margin-bottom: 50px;
+				}
+				//手机上单列显示
+				@media screen and (max-width: @screenPhoneMax) {
+					li {
+						width: 100%;
+					}
+				}
+				//平板上两列显示
+				@media screen and (min-width: @screenPadMin) {
+					li {
+						width: 50%;
+					}
+				}
+				//电脑上四列显示
+				@media screen and (min-width: @screenPcSmMin) {
+					li {
+						width: 25%;
+					}
+				}
+			}
 		}
 		
+		//模块: 响应式布局
 		&.responsive {
 			background: @bgLightGray;
 			
 			hgroup {
 				margin-bottom: 40px;
 			}
+			
+			//手机上图片宽度为父容器的百分百
+			@media screen and (max-width: @screenPhoneMax){
+				img {
+					.db;
+					width: 100%;
+				}
+			}
+			//平板上为父容器的80%
+			@media screen and (min-width: @screenPadMin) and (max-width: @screenPadMax) {
+				img {
+					width: 80%;
+				}
+			}
+			//电脑上为自身原始大小,此为默认值,不用设.
 		}
 
-		&.update {
+		//模块: 最近更新
+		&.list-update {
 			hgroup {
 				margin-bottom: 90px;
 			}
-
-			li {
-				@size: 279px;
-				width: @size;
-				height: @size;
-				margin-right: 18px;
-				background: @bgLightGray;
-
-				&.last {
-					margin-right: 0;
-				}
-			}
 		}
 		
+		//模块: 联系我
 		&.contact {
 			font-size: @fzTitle;
 			background: @bgBlack;
@@ -289,11 +166,5 @@
 				color: @colorWhite;
 			}
 		}
-	}
-
-	footer {
-		padding-top: 20px;
-		height: 120px;
-		color: @colorLigthGray;
 	}
 }

@@ -1,0 +1,217 @@
+@import "./mixin.less";
+@import "./variable.less";
+
+* {
+	box-sizing: border-box;
+}
+html, body {
+	overflow-x: hidden;	
+}
+
+//导航栏为打开状态时, 相关元素的样式变化
+body.view-nav {
+	nav {
+		width: @navWidth;
+	}
+	.nav-switch {
+		left: @navWidth + 60px;
+	}
+	.container {
+		left: @navWidth;
+	}
+	.nav-switch {
+		background-image: url(../img/icon_close.png);
+	}
+}
+
+//导航栏
+nav {
+	.pf;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: @bgNav;
+	overflow: hidden;
+	box-sizing: border-box;
+	.anim;
+
+	ul {
+		margin: 60px 0 0 60px;
+	}
+	li {
+		margin-bottom: 50px;
+	}	
+	a {
+		.pr;
+		.db;
+		color: @colorGray;
+		text-decoration: none;
+
+		span {
+			.db;
+			margin-top: 5px;
+			font-size: @fzTextSmall;
+			font-family: @ffEn;
+		}
+
+		&.active, &:hover {
+			color: @colorWhite;
+		}
+	}
+}
+
+//导航栏开关
+.nav-switch {
+	.pf;
+	z-index: 3;
+	top: 60px;
+	left: 60px;
+	width: 20px;
+	height: 20px;
+	background: url(../img/icon_nav.png) no-repeat 0 0;
+	cursor: w-resize;
+	.anim;
+
+	@media screen and (max-width: @screenPadMax) {
+		top: 24px;
+		left: 24px;
+	}
+}
+
+//页面主体
+.container {
+	.pr;
+	z-index: 1;
+	left: 0;
+	.tac;
+	margin-left: 0;
+	color: @colorBlack;
+	font: @fzText/1.8 @ffZh;
+	.anim;
+
+	//导航栏半透明背景底衬
+	&.nav-ceiling:after {
+		content: '';
+		.pf;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 60px;
+		background: @colorWhite;
+		opacity: .9;
+	}	
+		
+	//区块, 文章
+	section, article {
+		padding: 100px 0;
+		overflow: hidden;
+		
+		//模块内容区大小
+		.content {
+			@media screen and (max-width: @screenPadMax){
+				.hc(90%);
+			}
+			@media screen and (min-width: @screenPcSmMin) {
+				.hc(750px);
+			}
+			@media screen and (min-width: @screenPcMidMin) {
+				.hc(970px);
+			}
+			@media screen and (min-width: @screenPcLgMin) {
+				.hc(1170px);
+			}
+		}
+		//模块主副标题
+		h1 {
+			font-size: @fzTitle;
+			.lh(1.8);
+		}
+		h2 {
+			font-size: @fzText;
+			.fwn;
+			color: @colorGray;
+		}
+		//列表
+		ul {
+			.clearfix;
+		}
+		li {
+			.fl;
+		}
+				
+		
+		//模块: 最近更新
+		&.list {
+			li {
+				a {
+					.db;
+					width: 100%;
+					height: 100%;
+					padding: 1em;
+					color: @colorBlack;
+					text-decoration: none;
+					background: @bgLightGray;
+
+					&:hover {
+						opacity: .8;
+					}
+				}
+			}
+			ul {
+				.box(@size, @mgr, @mgb) {
+					width: @size;
+					height: @size;
+					margin-right: @mgr;
+					margin-bottom: @mgb;
+				}
+				//手机上单列显示
+				@media screen and (max-width: @screenPhoneMax) {
+					margin-right: -5%;
+					margin-bottom: -5%;
+					li {
+						.fn;
+						margin-left: auto;
+						margin-right: auto;
+					}
+					//列表项宽高通过js计算
+				}
+				//平板上双列显示
+				@media screen and (min-width: @screenPadMin) {
+					margin-right: -5%;
+					margin-bottom: -5%;
+					//列表项宽高通过js计算
+				}
+				//电脑上四列显示, 根据屏幕调整尺寸
+				@media screen and (min-width: @screenPcSmMin) {
+					margin-right: -10px;
+					margin-bottom: -10px;
+					li {
+						.box(180px, 10px, 10px);
+					}
+				}
+				@media screen and (min-width: @screenPcMidMin) {
+					margin-right: -14px;
+					margin-bottom: -14px;
+					li {
+						.box(232px, 14px, 14px);
+					}
+				}
+				@media screen and (min-width: @screenPcLgMin) {
+					margin-right: -18px;
+					margin-bottom: -18px;
+					li {
+						.box(279px, 18px, 18px);
+					}
+				}
+			}
+		}
+	}
+
+	footer {
+		padding-top: 20px;
+		height: 120px;
+		color: @colorLigthGray;
+	}
+}

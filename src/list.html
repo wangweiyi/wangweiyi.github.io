@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+	<title>悠闲小作</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<!-- 导航栏 -->
+	<nav>
+		<ul>
+			<li>
+				<a href="#">首页<span>HOME</span></a>
+			</li>
+			<li>
+				<a class="active" href="#">悠闲小作<span>WORK</span></a>
+			</li>
+			<li>
+				<a href="#">经验分享<span>EXPERIENCE</span></a>
+			</li>
+			<li>
+				<a href="#">摄影<span>PHOTOGRAPH</span></a>
+			</li>
+		</ul>
+	</nav>
+	<!-- 导航栏开关-->
+	<div id="navSwitch" class="nav-switch" role="botton"></div>
+	
+	<!-- 网页主体 -->
+	<div id="container" class="container">
+		<!-- 内容列表 -->
+		<section class="list">
+			<div class="content">
+				<ul>
+					<li class="list-item"><a href="#">内容</a></li>
+					<li class="list-item"><a href="#">内容</a></li>
+					<li class="list-item"><a href="#">内容</a></li>
+					<li class="list-item"><a href="#">内容</a></li>
+				</ul>
+			</div>
+		</section>
+	</div>
+	<script type="text/javascript" src="lib/seajs/dist/sea.js"></script>
+	<script type="text/javascript">
+		// seajs 的简单配置
+		seajs.config({
+		  base: ".",
+		  alias: {
+		    "jquery": "lib/jquery/dist/jquery.js"
+		  }
+		});
+		// 加载入口模块
+		seajs.use("js/list");
+	</script>
+</body>
+</html>
