@@ -10,12 +10,13 @@ body.view-nav nav {
 }
 body.view-nav .nav-switch {
   left: 300px;
+  cursor: w-resize;
 }
 body.view-nav .container {
   left: 240px;
 }
 body.view-nav .nav-switch {
-  background-image: url(../img/icon_close.png?v=SepQBhp%2FsIowht%2B77g923Q%3D%3D);
+  background-image: url(../img/icon_close.png?v=LSRIZ3lXaGbLmC1f7I2vWw%3D%3D);
 }
 nav {
   position: fixed;
@@ -58,8 +59,8 @@ nav a:hover {
   left: 60px;
   width: 20px;
   height: 20px;
-  background: url(../img/icon_nav.png?v=IGNnPADIve%2BPm0DY%2FPk8ag%3D%3D) no-repeat 0 0;
-  cursor: w-resize;
+  background: url(../img/icon_nav.png?v=J3S4jfYOCMadKMnQlqODXQ%3D%3D) no-repeat 0 0;
+  cursor: e-resize;
   transition: all 400ms ease;
 }
 @media screen and (max-width: 767px) {
@@ -235,7 +236,7 @@ nav a:hover {
   position: relative;
   height: 500px;
   color: #fff;
-  background: #2e2e2e url(../img/head.png?v=ncJC2b9k5Q6d4OczUeKq%2Fg%3D%3D) no-repeat center bottom;
+  background: #2e2e2e url(../img/head.png?v=eIPl%2B8MViwVVdmerLjZ7HQ%3D%3D) no-repeat center bottom;
   background-size: auto 90%;
   overflow: hidden;
 }
@@ -268,7 +269,7 @@ nav a:hover {
 .container .site-header .slogon-content h1 {
   height: 90px;
   text-indent: -999999em;
-  background: url(../img/daxuezi.png?v=Bjo%2BF6fgDgSCT883iiZbAQ%3D%3D) no-repeat center top;
+  background: url(../img/daxuezi.png?v=08%2Fa%2BLYZOqiKwuqgKFhVbg%3D%3D) no-repeat center top;
 }
 @media screen and (max-width: 600px) {
   .container .site-header .slogon-content h1 {
@@ -290,15 +291,15 @@ nav a:hover {
   display: table-cell;
   vertical-align: middle;
 }
+.container .site-header .my-name {
+  margin: 8px 0;
+  font-size: 18px;
+}
 .container .site-header .self-intro {
   /* horizontal center */
   width: 30em;
   margin-left: auto;
   margin-right: auto;
-}
-.container .site-header .self-intro .my-name {
-  margin: 8px 0;
-  font-size: 18px;
 }
 @media screen and (max-width: 767px) {
   .container .site-header .self-intro {

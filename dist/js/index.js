@@ -8,7 +8,7 @@
 define(function(require, exports, module) {
   var $ = require('jquery');
   var $win = $(window); //导航栏
-  var $siteHeader = $('site-header'); //页面主体头部
+  var $siteHeader = $('#siteHeader'); //页面主体头部
   var $aboutBtn = $('#aboutBtn'); //siteHeader区域中的'关于我'按钮
   var $backBtn = $('#backBtn'); //关于我模块中的'返回'按钮
 
