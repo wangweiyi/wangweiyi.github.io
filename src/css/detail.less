@@ -1,0 +1,82 @@
+//详情页样式
+@import "./common/layout.less";
+
+body.nav-ceilling {
+	.nav-quick {
+		top: @navTopSm;
+	}
+}
+.nav-quick {
+	.pf;
+	z-index: 3;
+	top: @navTopSm;
+	right: 0;
+
+	ul {
+		.clearfix;
+	}
+	li {
+		.fl;
+		margin-left: 10px;
+
+		&:nth-of-type(1) {
+			margin-left: 0;
+		}
+	}
+	a {
+		.db;
+		padding: 0 8px;
+		color: @colorWhite;
+		font-size: @fzText;
+		line-height: 2;
+		text-decoration: none;
+		background: @bgNav;
+
+		&:hover {
+			opacity: .8;
+		}
+	}
+}
+.container-detail {
+	article.main {
+		padding: 180px 0 0;
+
+		h1 {
+			font-size: @fzArticleTitle;
+		}
+		p {
+			margin: 52px auto;
+			width: 60%;
+		}
+		.pic-wrapper {
+			padding: 100px 20%;
+			background: @bgLightGray;
+
+			img {
+				.db;
+				width: 100%;
+				margin-top: 80px;
+
+				&:nth-of-type(1) {
+					margin-top: 0;
+				}
+			}
+		}
+
+		@media screen and (max-width: @screenPadMax) {
+			padding-top: 100px;
+
+			p {
+				margin: 20px auto;
+				width: 100%;
+			}
+			.pic-wrapper {
+				padding: 10%;
+
+				img {
+					margin-top: 50px;
+				}
+			}
+		}
+	}
+}

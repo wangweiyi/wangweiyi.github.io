@@ -8,6 +8,8 @@
 define(function(require, exports, module) {
   module.exports =  {
     SCREEN_PAD_MAX: 767,
-    SCREEN_PHONE_MAX: 479
+    SCREEN_PHONE_MAX: 479,
+    NAV_TOP: 60,
+    NAV_TOP_SM: 24
   };
 });

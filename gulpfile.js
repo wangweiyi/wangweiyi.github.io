@@ -16,20 +16,20 @@ gulp.task('less-to-css', function() {
     return gulp.src('src/**/*.less') //该任务针对的文件
         .pipe(less()) //该任务调用的模块
         .pipe(cssver()) //给css文件里引用文件加版本号（文件MD5）
-        // .pipe(cssmin())
+        .pipe(cssmin())
         .pipe(gulp.dest('dist'));
 });
 
 gulp.task('minify-css', function() { //将src目录下的css压缩至dist目录
     return gulp.src('src/**/*.css') // 要压缩的css文件
         .pipe(cssver()) //给css文件里引用文件加版本号（文件MD5）
-        // .pipe(cssmin())
+        .pipe(cssmin())
         .pipe(gulp.dest('dist'));
 });
 
 gulp.task('minify-js', function() {
     return gulp.src('src/**/*.js') // 要压缩的js文件
-        // .pipe(uglify())
+        // .pipe(uglify()) //打开这个index.js里jquery会找不到，why???
         .pipe(gulp.dest('dist')); 
 });
 
@@ -49,7 +49,7 @@ gulp.task('minify-html', function() {
         minifyCSS: true //压缩页面CSS
     };
     return gulp.src('src/**/*.html')
-        // .pipe(htmlmin(options))
+        .pipe(htmlmin(options))
         .pipe(gulp.dest('dist'));
 });
 
@@ -91,11 +91,11 @@ gulp.task('watch', function() {
 });
 
 // check js error
-// gulp.task('lint', function() {
-//   gulp.src('src/**/*.js')
-//     .pipe(jshint())
-//     .pipe(jshint.reporter('js error'));
-// });
+gulp.task('lint', function() {
+  gulp.src('src/**/*.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter('js error'));
+});
 
 gulp.task('default', ['less-to-css', 'minify-css', 'minify-js', 'minify-html', 'minify-img', 'watch'], function() {
 	console.log('Compile finished!');

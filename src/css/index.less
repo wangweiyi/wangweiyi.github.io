@@ -1,11 +1,12 @@
-@import "./units/mixin.less";
-@import "./units/variable.less";
-@import "./units/base.less";
+//首页样式
+@import "./common/mixin.less";
+@import "./common/variable.less";
+@import "./common/layout.less";
+@import "./common/mod-list.less";
 
 //页面主体
-.container {
-
-	//页面主体头部
+.container-index {
+	//主体头部
 	.site-header {
 		.pr;
 		height: 500px;
@@ -32,7 +33,11 @@
 		}
 		//DAXUEZI
 		.slogon {
-			.absolute-full;
+			.pa;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
 			.anim;
 		}
 		.slogon-content {
@@ -52,7 +57,11 @@
 		//关于我
 		.about {
 			.dt;
-			.absolute-full;
+			.pa;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
 			background: @bgBlack;
 			transform: translateY(100%);
 			.anim;
@@ -85,9 +94,19 @@
 		}
 	}
 	
-	//区块
+	//模块
 	section {
-		//模块: 我在做什么
+    padding: 100px 0;
+    
+    //列表
+    ul {
+      .clearfix;
+    }
+    li {
+      .fl;
+    }
+
+		//我在做什么
 		&.work {
 			hgroup {
 				margin-bottom: 50px;
@@ -123,7 +142,7 @@
 			}
 		}
 		
-		//模块: 响应式布局
+		//响应式布局
 		&.responsive {
 			background: @bgLightGray;
 			
@@ -147,14 +166,15 @@
 			//电脑上为自身原始大小,此为默认值,不用设.
 		}
 
-		//模块: 最近更新
+		//最近更新
 		&.list-update {
 			hgroup {
 				margin-bottom: 90px;
 			}
+      .mod-list;
 		}
 		
-		//模块: 联系我
+		//联系我
 		&.contact {
 			font-size: @fzTitle;
 			background: @bgBlack;

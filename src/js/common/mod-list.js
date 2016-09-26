@@ -9,12 +9,12 @@ define(function(require, exports, module) {
   var constant = require("./constant");
   var $ = require('jquery');
   var $win = $(window);
-  var $updateItem = $('.list-item'); //列表项
-
+  var $listItem = $('.list-item'); //列表项
+  
   function resizeItem() {
     var winWidth = $win.width();
     if (winWidth <= constant.SCREEN_PAD_MAX) { //平板 或 手机
-        var contentWidth = $updateItem.parents('.content').outerWidth(); //内容区容器宽度
+        var contentWidth = $listItem.parents('.content').outerWidth(); //内容区容器宽度
         var itemSize = contentWidth * .475; //两列模式
         var mgr = contentWidth * .05;
         var mgb = contentWidth * .05;
@@ -24,7 +24,7 @@ define(function(require, exports, module) {
           var mgr = 'auto';
         } 
 
-        $updateItem.width(itemSize).height(itemSize).css({
+        $listItem.width(itemSize).height(itemSize).css({
           marginRight: mgr,
           marginBottom: mgb
         });

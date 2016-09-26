@@ -7,7 +7,7 @@
  */
 define(function(require, exports, module) {
   //导航栏交互
-  require("./units/nav");
-  //列表项交互
-  require("./units/list-item");
+  require("./common/nav");
+  //列表交互
+  require("./common/mod-list");
 });
