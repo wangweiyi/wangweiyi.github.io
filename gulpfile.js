@@ -88,6 +88,7 @@ gulp.task('watch', function() {
     gulp.watch('src/**/*.js', ['minify-js']);
     gulp.watch('src/**/*.html', ['minify-html']);
     gulp.watch('src/**/img/*', ['minify-img']);
+    gulp.watch('gulpfile.js', ['default']);
 });
 
 // check js error

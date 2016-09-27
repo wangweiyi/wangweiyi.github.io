@@ -64,17 +64,17 @@
 	<!-- 页脚 -->
 	<footer>&copy; 2016 daxuezi.com 版权所有</footer>
 
-	<script type="text/javascript" src="lib/seajs/dist/sea.js"></script>
+	<script type="text/javascript" src="js/lib/sea.js"></script>
 	<script type="text/javascript">
 		// seajs 的简单配置
 		seajs.config({
-		  base: ".",
+		  base: "./js",
 		  alias: {
-		    "jquery": "lib/jquery/dist/jquery.js"
+		    "jquery": "lib/jquery.js"
 		  }
 		});
 		// 加载入口模块
-		seajs.use("js/detail");
+		seajs.use("./js/detail"); //相对于当前页面
 	</script>
 </body>
 </html>

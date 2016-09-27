@@ -1,11 +1,1 @@
-define( [
-	"../var/support"
-], function( support ) {
-
-"use strict";
-
-support.focusin = "onfocusin" in window;
-
-return support;
-
-} );
+define(["../var/support"],function(n){"use strict";return n.focusin="onfocusin"in window,n});

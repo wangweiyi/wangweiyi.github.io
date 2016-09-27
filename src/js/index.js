@@ -7,7 +7,7 @@
  */
 define(function(require, exports, module) {
   //导航栏交互
-  require('./common/nav');
+  require('common/nav');
   //最近更新交互
   require('./common/mod-list');
 
