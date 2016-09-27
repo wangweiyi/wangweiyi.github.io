@@ -1,14 +1,21 @@
 //详情页样式
 @import "./common/layout.less";
 
-body.nav-ceilling {
-	.nav-quick {
-		top: @navTopSm;
+body {
+	&.nav-ceilling {
+		.nav-quick {
+			top: @navTopSm;
+		}
+	}
+	&.view-nav {
+		.nav-quick {
+			.dn;
+		}
 	}
 }
 .nav-quick {
 	.pf;
-	z-index: 3;
+	z-index: 66666;
 	top: @navTopSm;
 	right: 0;
 

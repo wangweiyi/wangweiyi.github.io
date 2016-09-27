@@ -20,7 +20,7 @@ define(function(require, exports, module) {
         var mgb = contentWidth * .05;
 
         if (winWidth <= constant.SCREEN_PHONE_MAX) { //手机上显示单列模式
-          var itemSize = contentWidth * .9;
+          var itemSize = contentWidth;
           var mgr = 'auto';
         } 
 
