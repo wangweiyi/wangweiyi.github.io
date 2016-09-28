@@ -1,0 +1,15 @@
+{
+	"name": "da_xue_zi",
+	"description": "张雪的个人网站",
+	"dependencies": {
+	    "jquery": "*",
+	    "seajs": "*"
+	},
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
+}
