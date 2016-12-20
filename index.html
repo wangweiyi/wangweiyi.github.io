@@ -1,14 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Cathy's blog</title>
-	<style>
-		body {
-			padding: 50px;
-		}
-	</style>
+  <meta charset="UTF-8">
+  <title>Cathy's Site</title>
+  <link rel="stylesheet" type="text/css" href="./index.css">
 </head>
 <body>
-<a href="dist/index.html">大雪子-首页</a>
+  <nav>
+    <div class="center">
+      <a class="nav-item active" href="javascript:;">Home</a>
+      <a class="nav-item" href="javascript:;">Web前端</a>
+      <a class="nav-item" href="javascript:;">Travel</a>
+      <a class="nav-item" href="javascript:;">Life Style</a>
+    </div>   
+  </nav>
+
+  <header>
+    <h1 class="site-name">Cathy</h1>
+    <h2 class="site-slogon">keep memories alive</h2>
+  </header>
+
+  <main>
+    <div class="center">      
+      <article>
+          <div class="article-banner">
+            <a href="./article.html" title="English Breakfast Tea With Tasty Donut Desserts">
+              <img src="https://awcdn1.ahmad.works/writing/wp-content/uploads/2015/05/Desserts-940x400.jpg" alt="Desserts">
+            </a>
+          </div>  
+          <h2 class="article-title"><a href="./article.html">English Breakfast Tea With Tasty Donut Desserts</a></h2>
+          <div class="article-meta">
+            <span class="article-meta-item">发表于：<span datetime="2016-12-19T15:35:00+00:80">2016-12-19</span></span>
+            <span class="article-meta-item">分类于：<a href="#">Life Style</a></span>
+            <span class="article-meta-item">标签：<a rel="tag" href="#">美食</a>,<a rel="tag" href="#">早餐</a></span>
+          </div>
+          <div class="article-content">
+            <p>It's no secret that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencies, responding to the new possibilities available. However, the industry is fast becoming overcrowded, heaving with agencies offering similar services — on the surface, at least. Producing creative, fresh projects is the key to standing out. Unique side projects are the best place to innovate, but balancing commercially and creatively lucrative work is tricky. So, this article looks at …</p>
+          </div>
+          <div class="article-control">
+            <a class="article-control-button" role="button" href="./article.html">阅读全文</a>
+          </div>
+      </article>
+
+      <article>          
+          <h2 class="article-title"><a href="./article-zh.html">Async JavaScript</a></h2>
+          <div class="article-meta">
+            <span class="article-meta-item">发表于：<span datetime="2016-12-19T15:35:00+00:80">2016-12-19</span></span>
+            <span class="article-meta-item">分类于：<a href="#">Web前端</a></span>
+            <span class="article-meta-item">标签：<a rel="tag" href="#">javascript</a></span>
+          </div>
+          <div class="article-content">
+            <p>最近看了一些JavaScript异步编程方面文章，也反复读了几遍薄薄的《Async JavaScript》。总结一下，供自己后续学习使用，并分享给大家。</p>
+            <p>首先，有几个问题。什么是异步编程/异步函数？异步函数和回调函数有什么关系？为什么异步编程经常与JavaScript同时出现？JavaScript中的异步函数的机制是怎样的？那么现在异步编程有什么解决方案？未来的JavaScript异步编程是什么样子？如果你对上述几个问题已经虽不至“如数家珍”但已是“一目了然”，那么再往下的内容就不适合你了。那么，我们开始吧~</p>
+          </div>
+          <div class="article-control">
+            <a class="article-control-button" role="button" href="./article-zh.html">阅读全文</a>
+          </div>
+      </article>
+    </div>
+  </main>
+
+  <footer>&copy; 2016 Cathy. All Rights Reserved.</footer>
 </body>
 </html>
