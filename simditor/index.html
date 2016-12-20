@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cathy's Site</title>
+  <link rel="stylesheet" type="text/css" href="./simditor.css" />
+  <style>
+    #editor {
+      width: 800px;
+      height: 600px;
+    }
+  </style>
+</head>
+<body>
+  <textarea id="editor"></textarea>
+
+  <script src="./jquery.min.js"></script>
+  <script src="./module.js"></script>
+  <script src="./hotkeys.js"></script>
+  <script src="./uploader.js"></script>
+  <script src="./simditor.js"></script>
+
+  <script>
+    var toolbar = ['title', 'bold', 'italic', 'underline', 'strikethrough', 'fontScale', 'color', '|', 'ol', 'ul', 'blockquote', 'code', 'table', '|', 'link', 'image', 'hr', '|', 'indent', 'outdent', 'alignment'];
+    var editor = new Simditor({
+      textarea: $('#editor'),
+      placeholder: '这里输入文字...',
+      toolbar: toolbar,
+      pasteImage: true
+    });
+  </script>
+</body>
+</html>

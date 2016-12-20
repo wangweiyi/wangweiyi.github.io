@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&subset=latin-ext');
+
+@font-face {
+  font-family: 'Rokkitt';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./Uu8b3yBtxQPmPTMr0WQ_CA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'Rokkitt';
+  font-style: normal;
+  font-weight: 700;
+  src: url(./Mef17w3J4CtS0lw4Wa_8r_k_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+
+@font-face {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    src: local('PT Serif'),local(PTSerif-Regular),url(http://fonts.gstatic.com/s/ptserif/v8/5hX15RUpPERmeybVlLQEWBTbgVql8nDJpwnrE27mub0.woff2) format("woff2");
+    unicode-range: U+0460-052F,U+20B4,U+2DE0-2DFF,U+A640-A69F
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    src: local('PT Serif'),local(PTSerif-Regular),url(http://fonts.gstatic.com/s/ptserif/v8/fU0HAfLiPHGlZhZpY6M7dBTbgVql8nDJpwnrE27mub0.woff2) format("woff2");
+    unicode-range: U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    src: local('PT Serif'),local(PTSerif-Regular),url(http://fonts.gstatic.com/s/ptserif/v8/CPRt--GVMETgA6YEaoGitxTbgVql8nDJpwnrE27mub0.woff2) format("woff2");
+    unicode-range: U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    src: local('PT Serif'),local(PTSerif-Regular),url(http://fonts.gstatic.com/s/ptserif/v8/I-OtoJZa3TeyH6D9oli3ifesZW2xOQ-xsNqO47m55DA.woff2) format("woff2");
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215,U+E0FF,U+EFFD,U+F000
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    src: local('PT Serif Bold'),local(PTSerif-Bold),url(http://fonts.gstatic.com/s/ptserif/v8/QABk9IxT-LFTJ_dQzv7xpDTOQ_MqJVwkKsUn0wKzc2I.woff2) format("woff2");
+    unicode-range: U+0460-052F,U+20B4,U+2DE0-2DFF,U+A640-A69F
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    src: local('PT Serif Bold'),local(PTSerif-Bold),url(http://fonts.gstatic.com/s/ptserif/v8/QABk9IxT-LFTJ_dQzv7xpDUj_cnvWIuuBMVgbX098Mw.woff2) format("woff2");
+    unicode-range: U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    src: local('PT Serif Bold'),local(PTSerif-Bold),url(http://fonts.gstatic.com/s/ptserif/v8/QABk9IxT-LFTJ_dQzv7xpCYE0-AqJ3nfInTTiDXDjU4.woff2) format("woff2");
+    unicode-range: U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    src: local('PT Serif Bold'),local(PTSerif-Bold),url(http://fonts.gstatic.com/s/ptserif/v8/QABk9IxT-LFTJ_dQzv7xpI4P5ICox8Kq3LLUNMylGO4.woff2) format("woff2");
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215,U+E0FF,U+EFFD,U+F000
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    font-style: italic;
+    font-weight: 400;
+    src: local('PT Serif Italic'),local(PTSerif-Italic),url(http://fonts.gstatic.com/s/ptserif/v8/O_WhD9hODL16N4KLHLX7xSEAvth_LlrfE80CYdSH47w.woff2) format("woff2");
+    unicode-range: U+0460-052F,U+20B4,U+2DE0-2DFF,U+A640-A69F
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    font-style: italic;
+    font-weight: 400;
+    src: local('PT Serif Italic'),local(PTSerif-Italic),url(http://fonts.gstatic.com/s/ptserif/v8/3Nwg9VzlwLXPq3fNKwVRMCEAvth_LlrfE80CYdSH47w.woff2) format("woff2");
+    unicode-range: U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    font-style: italic;
+    font-weight: 400;
+    src: local('PT Serif Italic'),local(PTSerif-Italic),url(http://fonts.gstatic.com/s/ptserif/v8/b31S45a_TNgaBApZhTgE6CEAvth_LlrfE80CYdSH47w.woff2) format("woff2");
+    unicode-range: U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    font-style: italic;
+    font-weight: 400;
+    src: local('PT Serif Italic'),local(PTSerif-Italic),url(http://fonts.gstatic.com/s/ptserif/v8/03aPdn7fFF3H6ngCgAlQzPk_vArhqVIZ0nv9q090hN8.woff2) format("woff2");
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215,U+E0FF,U+EFFD,U+F000
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    font-style: italic;
+    font-weight: 700;
+    src: local('PT Serif Bold Italic'),local(PTSerif-BoldItalic),url(http://fonts.gstatic.com/s/ptserif/v8/Foydq9xJp--nfYIx2TBz9ede9INZm0R8ZMJUtfOsxrw.woff2) format("woff2");
+    unicode-range: U+0460-052F,U+20B4,U+2DE0-2DFF,U+A640-A69F
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    font-style: italic;
+    font-weight: 700;
+    src: local('PT Serif Bold Italic'),local(PTSerif-BoldItalic),url(http://fonts.gstatic.com/s/ptserif/v8/Foydq9xJp--nfYIx2TBz9bpHcMS0zZe4mIYvDKG2oeM.woff2) format("woff2");
+    unicode-range: U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    font-style: italic;
+    font-weight: 700;
+    src: local('PT Serif Bold Italic'),local(PTSerif-BoldItalic),url(http://fonts.gstatic.com/s/ptserif/v8/Foydq9xJp--nfYIx2TBz9RHJTnCUrjaAm2S9z52xC3Y.woff2) format("woff2");
+    unicode-range: U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    font-style: italic;
+    font-weight: 700;
+    src: local('PT Serif Bold Italic'),local(PTSerif-BoldItalic),url(http://fonts.gstatic.com/s/ptserif/v8/Foydq9xJp--nfYIx2TBz9YWiMMZ7xLd792ULpGE4W_Y.woff2) format("woff2");
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215,U+E0FF,U+EFFD,U+F000
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    color: #333;
+    font: 16px/1.5 Arail, sans-serif;
+    overflow-x: hidden;
+    word-break: break-word;
+}
+a, a:link {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  color: #f47e00;
+}
+.center {
+  width: 1000px;
+  margin: 0 auto;
+}
+.clearfix:after {
+  clear: both;
+  display: block;
+  height: 0;
+  content: '.';
+  visibility: hidden;
+}
+
+nav {
+  font-size: 18px;
+  font-family: 'Rokkitt', serif;
+  border-bottom: 1px solid #eee;
+}
+.nav-item {
+  display: inline-block;
+  padding: 16px 10px 13px;
+}
+.nav-item.active {
+  color: #f47e00;
+  font-weight: bold;
+  cursor: default;
+}
+
+header {
+  padding: 30px 0 40px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+.site-name {
+  margin-bottom: 15px;
+  font: normal 54px 'Kaushan Script', cursive;
+}
+.site-slogon {
+    position: relative;
+    display: inline-block;    
+    padding: 0 15px;
+    color: #313131;
+    font: italic bold 14px/1.5 'PT Serif',serif;
+}
+.site-slogon:before, .site-slogon:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    display: block;
+    width: 60px;
+    background: #313131;
+    left: 100%;
+}
+.site-slogon:before {
+    left: auto;
+    right: 100%;
+}
+
+
+main {
+  margin-top: 50px;
+  min-height: 600px;
+}
+article {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+}
+article:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.article-banner {
+  margin-bottom: 40px;
+}
+.article-banner img {
+  border-radius: 10px;
+}
+
+.article-title {
+  font-size: 28px;
+}
+.article-meta-item {
+  margin-right: 18px;
+  color: #666;
+  font-size: 12px;
+}
+.article-meta-item a {
+  padding-bottom: 1px;
+  color: #222;
+  border-bottom: 1px dotted #ccc;
+}
+.article-meta-item a:hover {
+  color: #f47e00;
+}
+
+.article-content {
+  margin-top: 24px;
+}
+.article-content p {
+  margin: 1.2em 0;
+}
+.article-content h4 {
+  padding-top: 40px; 
+}
+
+.article-control {
+  margin-top: 40px;
+}
+.article-control-button {  
+  display: inline-block;
+  line-height: 38px;
+  padding: 0 30px;
+  color: #f47e00;
+  border: 1px solid #f47e00;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: 'Microsoft Yahei';
+}
+.article-control-button:hover {
+  color: #fff;
+  background: #f47e00;
+}
+
+
+
+footer {
+  padding: 20px 0;
+  color: #aaa;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
