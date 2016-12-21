@@ -1,0 +1,65 @@
+/* header */
+header {
+  border-bottom: 1px solid #eee;
+}
+.top-nav {
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+  font-family: 'mixFont Sans-Serif', sans-serif;
+}
+.top-nav-item {
+  display: inline-block;
+  padding: 16px 10px 13px;
+}
+.top-nav-item.active {
+  color: #f47e00;
+  font-weight: bold;
+  cursor: default;
+}
+
+.site-meta {
+  padding: 30px 0 40px;
+  text-align: center;
+}
+.site-name {
+  margin-bottom: 15px;  
+  font: normal 54px 'Kaushan Script', cursive;
+}
+.site-slogon {
+    position: relative;
+    display: inline-block;    
+    padding: 0 15px;
+    color: #313131;
+    font: italic bold 14px/1.5 'mixFont Serif',serif;
+}
+.site-slogon:before, .site-slogon:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    display: block;
+    width: 60px;
+    background: #313131;
+    left: 100%;
+}
+.site-slogon:before {
+    left: auto;
+    right: 100%;
+}
+
+
+/* 页面主区域 */
+main {
+  margin-top: 50px;
+  min-height: 600px;
+}
+
+
+/* footer */
+footer {
+  padding: 20px 0;
+  color: #aaa;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
