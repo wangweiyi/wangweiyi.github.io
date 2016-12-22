@@ -1,6 +1,6 @@
 article {
   margin-bottom: 40px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   border-bottom: 1px solid #eee;
 }
 article:last-child {
@@ -12,6 +12,7 @@ article:last-child {
   margin-bottom: 40px;
 }
 .article-banner img {
+  width: 100%;
   border-radius: 10px;
 }
 
@@ -26,6 +27,20 @@ article:last-child {
   margin-right: 18px;
   color: #666;
   font-size: 12px;
+}
+.article-meta-item [rel=tag] {
+  margin-left: 8px;
+}
+.article-meta-item [rel=tag]:first-child {
+  margin-left: 0;
+}
+
+@media screen and (max-width: 480px) {				
+  .article-meta-item {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
 .article-meta-item a {
   padding-bottom: 1px;
@@ -47,7 +62,7 @@ article:last-child {
 }
 
 .article-control {
-  margin-top: 40px;
+  margin-top: 25px;
 }
 .article-control-button {  
   display: inline-block;

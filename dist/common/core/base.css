@@ -33,7 +33,8 @@ h1, h2, h3, h4, h5, h6, [role=button] {
   visibility: hidden;
 }
 .center {
-  width: 1000px;
+  width: 88%;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
