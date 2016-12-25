@@ -1,4 +1,5 @@
 import React from 'react';
+import style from './footer.less';
 
 class Footer extends React.Component {
     constructor(props) {
@@ -6,7 +7,7 @@ class Footer extends React.Component {
     }
     render() {
         return (
-            <footer dangerouslySetInnerHTML={{__html: this.props.data.copyrights}}></footer>
+            <footer className={style.siteFooter}>&copy; 2016 Cathy. All Rights Reserved.</footer>
         );
     }
 }

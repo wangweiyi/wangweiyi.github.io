@@ -1,0 +1,27 @@
+/* 页面公用且必须的基础样式 */
+
+@import './normalize.css';
+@import './font';
+@import './variables';
+@import './mixins';
+
+// 正文采用易读的serif字体
+body {
+  font: 16px/1.5 'mixFont Serif';
+  color: @fontColor;
+  word-break: break-word;
+  overflow-x: hidden;
+}
+
+// 标题采用醒目的sans-serif字体
+h1, h2, h3, h4, h5, h6, [role=button] {
+  font-family: 'mixFont Sans-Serif', sans-serif;
+}
+
+// 取消a标签默认的下划线
+a {
+   text-decoration: none;
+}
+a.active, a:hover {
+  color: @fontHighlightColor;
+}
