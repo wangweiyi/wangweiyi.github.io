@@ -1,6 +1,10 @@
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const fs = require('fs');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+//所有文章的文件名列表
+const articleFiles = fs.readdirSync('./src/database/articles');
 
 module.exports = {
   // devtool: 'eval-source-map',//配置生成Source Maps，选择合适的选项
@@ -26,17 +30,17 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-            presets: ['latest', 'react']
+          presets: ['latest', 'react']
         }
 
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&camelCase&importLoaders=1&localIdentName=[name]--[local]--[hash:base64:5]') 
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&camelCase&importLoaders=1&localIdentName=[name]--[local]--[hash:base64:5]')
       },
       {
         test: /\.less$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&camelCase&importLoaders=1&localIdentName=[name]--[local]--[hash:base64:5]!less-loader') 
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&camelCase&importLoaders=1&localIdentName=[name]--[local]--[hash:base64:5]!less-loader')
       },
       {
         test: /\.json$/,
@@ -56,6 +60,9 @@ module.exports = {
     }),
     new ExtractTextPlugin('bundle.css', {
       allChunks: true
+    }),
+    new webpack.DefinePlugin({
+      '__ARTICLE_FILES__': JSON.stringify(articleFiles.join(','))
     })
   ]
 };

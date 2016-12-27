@@ -7,19 +7,17 @@ import Footer from '../../components/footer';
 import Main from '../../components/main';
 import Article from '../../components/article';
 
-
-var asyncJs = require('../../database/articles/async-javascript.json');
-Object.assign(asyncJs, {displayMode: 'intro'});
-
-// var fs = require('fs');
-// let files = fs.readdirSync('../../database/articles');
+var articles =  __ARTICLE_FILES__.split(',').map((filename, index) => {
+  var articleData = require('../../database/articles/'+filename);  
+  Object.assign(articleData, {displayMode: 'intro'});
+  return <Article data={articleData} key={index} />;
+});
 
 ReactDOM.render(
   <div>
     <Header/>
     <Main>
-      <Article data={asyncJs} />
-      <div>{files}</div>
+      {articles}
     </Main>
     <Footer/>
   </div>,  
