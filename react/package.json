@@ -1,6 +1,6 @@
 {
   "name": "cathy-site-by-react",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "cathy's website build with react, webpack, es6, and jsx.",
   "main": "index.js",
   "scripts": {
@@ -23,13 +23,13 @@
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
-    "html-webpack-plugin": "^2.24.1",
     "json-loader": "^0.5.4",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "react-style": "^0.5.5",
+    "react-router": "^3.0.0",
+    "static-site-generator-webpack-plugin": "^3.1.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.14.0",

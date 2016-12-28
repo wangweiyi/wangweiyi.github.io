@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Kaushan+Script&subset=latin-ext);@import url(https://fonts.googleapis.com/css?family=Kaushan+Script&subset=latin-ext);@import url(https://fonts.googleapis.com/css?family=Kaushan+Script&subset=latin-ext);/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script&subset=latin-ext);@import url(https://fonts.googleapis.com/css?family=Kaushan+Script&subset=latin-ext);/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Correct the line height in all browsers.
@@ -416,86 +416,6 @@ legend {
   line-height: inherit;
   font-weight: inherit;
 }
-/* 页面公用且必须的基础样式 */
-/*site-name字体*/
-/*serif字体*/
-@font-face {
-  font-family: 'mixFont Serif';
-  src: local('simsun'), local(simsun);
-  /*宋体*/
-  unicode-range: U+4E00-9FCB;
-  /*汉字字符集*/
-}
-@font-face {
-  font-family: 'mixFont Serif';
-  font-style: normal;
-  font-weight: 400;
-  src: url(http://fonts.gstatic.com/s/ptserif/v8/5hX15RUpPERmeybVlLQEWBTbgVql8nDJpwnrE27mub0.woff2) format("woff2");
-}
-@font-face {
-  font-family: 'mixFont Serif';
-  font-style: normal;
-  font-weight: 700;
-  src: url(http://fonts.gstatic.com/s/ptserif/v8/QABk9IxT-LFTJ_dQzv7xpI4P5ICox8Kq3LLUNMylGO4.woff2) format("woff2");
-}
-@font-face {
-  font-family: 'mixFont Serif';
-  font-style: italic;
-  font-weight: 400;
-  src: url(http://fonts.gstatic.com/s/ptserif/v8/03aPdn7fFF3H6ngCgAlQzPk_vArhqVIZ0nv9q090hN8.woff2) format("woff2");
-}
-@font-face {
-  font-family: 'mixFont Serif';
-  font-style: italic;
-  font-weight: 700;
-  src: url(http://fonts.gstatic.com/s/ptserif/v8/Foydq9xJp--nfYIx2TBz9YWiMMZ7xLd792ULpGE4W_Y.woff2) format("woff2");
-}
-/* sans-serif字体 */
-@font-face {
-  font-family: 'mixFont Sans-Serif';
-  src: local('Microsoft Yahei'), local(Microsoft-Yahei);
-  /*微软雅黑*/
-  unicode-range: U+4E00-9FCB;
-  /*汉字字符集*/
-}
-@font-face {
-  font-family: 'mixFont Sans-Serif';
-  font-style: normal;
-  font-weight: 400;
-  src: url(http://fonts.gstatic.com/s/raleway/v11/0dTEPzkLWceF7z0koJaX1A.woff2) format("woff2");
-}
-@font-face {
-  font-family: 'mixFont Sans-Serif';
-  font-style: normal;
-  font-weight: 700;
-  src: url(http://fonts.gstatic.com/s/raleway/v11/JbtMzqLaYbbbCL9X6EvaI_k_vArhqVIZ0nv9q090hN8.woff2) format("woff2");
-}
-body {
-  font: 16px/1.5 'mixFont Serif';
-  color: #333;
-  word-break: break-word;
-  overflow-x: hidden;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-[role=button] {
-  font-family: 'mixFont Sans-Serif', sans-serif;
-}
-a {
-  text-decoration: none;
-}
-a.index--active--1hV-v,
-a:hover {
-  color: #f47e00;
-}
-body .index--say-hello--QquCo {
-  font-size: 20px;
-  color: orange;
-}
 /* 页面头部*/
 /* 页面公用且必须的基础样式 */
 /*site-name字体*/
@@ -653,79 +573,6 @@ a:hover {
   text-align: center;
   border-top: 1px solid #eee;
 }
-article {
-  margin-bottom: 40px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid #eee;
-}
-article:last-child {
-  margin-bottom: 0;
-  border-bottom: none;
-}
-.article--article-banner--2n95J {
-  margin-bottom: 40px;
-}
-.article--article-banner--2n95J img {
-  width: 100%;
-  border-radius: 10px;
-}
-.article--article-title--PQ8-z {
-  font-size: 28px;
-}
-.article--article-meta--33OiF {
-  font-family: 'mixFont Sans-Serif', sans-serif;
-}
-.article--article-meta-item--144V7 {
-  margin-right: 18px;
-  color: #666;
-  font-size: 12px;
-}
-.article--article-meta-item--144V7 [rel=tag] {
-  margin-left: 8px;
-}
-.article--article-meta-item--144V7 [rel=tag]:first-child {
-  margin-left: 0;
-}
-@media screen and (max-width: 480px) {
-  .article--article-meta-item--144V7 {
-    display: block;
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-}
-.article--article-meta-item--144V7 a {
-  padding-bottom: 1px;
-  color: #222;
-  border-bottom: 1px dotted #ccc;
-}
-.article--article-meta-item--144V7 a:hover {
-  color: #f47e00;
-}
-.article--article-content--2-3nE {
-  margin-top: 24px;
-}
-.article--article-content--2-3nE p {
-  margin: 1.2em 0;
-}
-.article--article-content--2-3nE h4 {
-  padding-top: 40px;
-}
-.article--article-control--3MKb7 {
-  margin-top: 25px;
-}
-.article--article-control-button--1pi9V {
-  display: inline-block;
-  line-height: 38px;
-  padding: 0 30px;
-  color: #f47e00;
-  border: 1px solid #f47e00;
-  border-radius: 30px;
-  cursor: pointer;
-}
-.article--article-control-button--1pi9V:hover {
-  color: #fff;
-  background: #f47e00;
-}
 /* 页面正文区 */
 /* 页面公用且必须的基础样式 */
 /*site-name字体*/
@@ -810,4 +657,77 @@ a:hover {
   padding: 30px 0;
   width: 1000px;
   min-height: 600px;
+}
+article {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eee;
+}
+article:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+.article--article-banner--2n95J {
+  margin-bottom: 40px;
+}
+.article--article-banner--2n95J img {
+  width: 100%;
+  border-radius: 10px;
+}
+.article--article-title--PQ8-z {
+  font-size: 28px;
+}
+.article--article-meta--33OiF {
+  font-family: 'mixFont Sans-Serif', sans-serif;
+}
+.article--article-meta-item--144V7 {
+  margin-right: 18px;
+  color: #666;
+  font-size: 12px;
+}
+.article--article-meta-item--144V7 [rel=tag] {
+  margin-left: 8px;
+}
+.article--article-meta-item--144V7 [rel=tag]:first-child {
+  margin-left: 0;
+}
+@media screen and (max-width: 480px) {
+  .article--article-meta-item--144V7 {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+.article--article-meta-item--144V7 a {
+  padding-bottom: 1px;
+  color: #222;
+  border-bottom: 1px dotted #ccc;
+}
+.article--article-meta-item--144V7 a:hover {
+  color: #f47e00;
+}
+.article--article-content--2-3nE {
+  margin-top: 24px;
+}
+.article--article-content--2-3nE p {
+  margin: 1.2em 0;
+}
+.article--article-content--2-3nE h4 {
+  padding-top: 40px;
+}
+.article--article-control--3MKb7 {
+  margin-top: 25px;
+}
+.article--article-control-button--1pi9V {
+  display: inline-block;
+  line-height: 38px;
+  padding: 0 30px;
+  color: #f47e00;
+  border: 1px solid #f47e00;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.article--article-control-button--1pi9V:hover {
+  color: #fff;
+  background: #f47e00;
 }

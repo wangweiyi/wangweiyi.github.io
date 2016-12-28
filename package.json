@@ -1,0 +1,19 @@
+{
+  "name": "cathy",
+  "version": "0.2.0",
+  "description": "cathy's website",
+  "main": "/react/dist/bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangweiyi/wangweiyi.github.io.git"
+  },
+  "author": "cathy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangweiyi/wangweiyi.github.io/issues"
+  },
+  "homepage": "https://github.com/wangweiyi/wangweiyi.github.io#readme"
+}
