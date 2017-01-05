@@ -470,4 +470,11 @@ a, input, label, select, option, textarea, button, fieldset, legend {
   font-weight: inherit; 
 }
 
-  
+ /**
+ * Use i as a short tag, not for style
+ */
+
+i {
+  font-style: normal;
+}
+

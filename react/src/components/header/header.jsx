@@ -11,7 +11,7 @@ class Header extends React.Component {
       <header className={style.siteHeader}>
         <nav className={style.topNav}>
           <div className={style.topNavItemsWrap}>
-            <IndexLink to="/" className={style.topNavItem} activeClassName="active">HOME</IndexLink>
+            <IndexLink to="/" className={style.topNavItem} activeClassName="active"><i className={style.icon}>&#xe607;</i>HOME</IndexLink>
           </div>
         </nav>
         <div className={style.siteMeta}>
