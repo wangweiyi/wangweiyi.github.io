@@ -26519,6 +26519,11 @@
 	            _react2.default.createElement(
 	              _reactRouter.IndexLink,
 	              { to: '/', className: _header2.default.topNavItem, activeClassName: 'active' },
+	              _react2.default.createElement(
+	                'i',
+	                { className: _header2.default.icon },
+	                '\uE607'
+	              ),
 	              'HOME'
 	            )
 	          )
@@ -26551,7 +26556,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"active":"header--active--1jcAN","site-header":"header--site-header--ElfHK","siteHeader":"header--site-header--ElfHK","top-nav":"header--top-nav--3cUOt","topNav":"header--top-nav--3cUOt","fixed":"header--fixed--47BYO","top-nav-items-wrap":"header--top-nav-items-wrap--2cxn_","topNavItemsWrap":"header--top-nav-items-wrap--2cxn_","top-nav-item":"header--top-nav-item--1g4Fp","topNavItem":"header--top-nav-item--1g4Fp","site-meta":"header--site-meta--WRWDp","siteMeta":"header--site-meta--WRWDp","site-name":"header--site-name--2KYrS","siteName":"header--site-name--2KYrS","site-slogon":"header--site-slogon--10It0","siteSlogon":"header--site-slogon--10It0"};
+	module.exports = {"active":"header--active--1jcAN","icon":"header--icon--3QLKK","site-header":"header--site-header--ElfHK","siteHeader":"header--site-header--ElfHK","top-nav":"header--top-nav--3cUOt","topNav":"header--top-nav--3cUOt","fixed":"header--fixed--47BYO","top-nav-items-wrap":"header--top-nav-items-wrap--2cxn_","topNavItemsWrap":"header--top-nav-items-wrap--2cxn_","top-nav-item":"header--top-nav-item--1g4Fp","topNavItem":"header--top-nav-item--1g4Fp","site-meta":"header--site-meta--WRWDp","siteMeta":"header--site-meta--WRWDp","site-name":"header--site-name--2KYrS","siteName":"header--site-name--2KYrS","site-slogon":"header--site-slogon--10It0","siteSlogon":"header--site-slogon--10It0"};
 
 /***/ },
 /* 236 */
@@ -26672,7 +26677,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"active":"main--active--1NdCb","site-main":"main--site-main--1kiD5","siteMain":"main--site-main--1kiD5"};
+	module.exports = {"active":"main--active--1NdCb","icon":"main--icon--2CGG6","site-main":"main--site-main--1kiD5","siteMain":"main--site-main--1kiD5"};
 
 /***/ },
 /* 240 */
