@@ -9,7 +9,7 @@ class Article extends React.Component {
   
   render() {
     const title = this.props.title || this.props.params.title; //标题         
-    const data = require('../../database/articles/' + title); //数据        
+    const data = require('../../../database/articles/' + title); //数据        
     const displayAsIntro = this.props.displayAsIntro === true; //显示模式：简介 | 全文
     const tags = data.tags.map((tag, i) => { //标签
       return <a rel="tag" href={tag.link} key={i}>{tag.text}</a>;

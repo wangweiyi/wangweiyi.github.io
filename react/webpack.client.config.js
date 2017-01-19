@@ -5,7 +5,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 //所有文章的文件名列表
 const articleFiles = fs.readdirSync('./database/articles');
-console.log(articleFiles)
 
 module.exports = {
   // devtool: 'eval-source-map',//配置生成Source Maps，选择合适的选项
@@ -16,10 +15,10 @@ module.exports = {
     inline: true//实时刷新
   },
 
-  entry: './server/app.js',
+  entry: './client/index',
   output: {
     publicPath: '/',
-    path: 'dist/server',
+    path: 'dist',
     filename: 'bundle.js'
   },
 
