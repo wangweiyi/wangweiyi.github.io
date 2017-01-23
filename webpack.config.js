@@ -65,7 +65,16 @@ const baseConfiguration = {
         loader: 'url-loader?limit=10000'
       }
     ]
-  }
+  },
+  
+  plugins: [
+    new ExtractTextPlugin('bundle.css', {
+      allChunks: true
+    }),
+    new webpack.DefinePlugin({
+      '__ARTICLE_FILES__': JSON.stringify(fs.readdirSync(paths.articles).join(','))
+    })
+  ]
 };
 
 // 后端配置
@@ -79,29 +88,14 @@ const backConfiguration = Object.assign({}, baseConfiguration, {
   node: {
     __filename: true,
     __dirname: true,
-  },
-
-  plugins: [
-    new ExtractTextPlugin('server.css', {
-      allChunks: true
-    })
-  ]
+  }
 });
 
 // 前端配置
 const frontConfiguration = Object.assign({}, baseConfiguration, {
   entry: {
     'client': './src/client',
-  },
-
-  plugins: [
-    new ExtractTextPlugin('client.css', {
-      allChunks: true
-    }),
-    new webpack.DefinePlugin({
-      '__ARTICLE_FILES__': JSON.stringify(fs.readdirSync(paths.articles).join(','))
-    })
-  ]
+  }
 });
 
 module.exports = [

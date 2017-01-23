@@ -24,7 +24,7 @@ function generateHtml(contentComponent) {
       <head>
         <meta charset="utf-8">
         <title>后端渲染测试</title>
-        <link rel="stylesheet" href="/static/client.css" />
+        <link rel="stylesheet" href="/static/bundle.css" />
       </head>
       <body>
         <div id="root">${bodyContent}</div>

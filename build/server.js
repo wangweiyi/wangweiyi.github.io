@@ -81,7 +81,7 @@
 	    contentComponent
 	  ));
 	
-	  return '\n    <!DOCTYPE html>\n    <html lang="zh-CN">\n      <head>\n        <meta charset="utf-8">\n        <title>\u540E\u7AEF\u6E32\u67D3\u6D4B\u8BD5</title>\n        <link rel="stylesheet" href="/static/client.css" />\n      </head>\n      <body>\n        <div id="root">' + bodyContent + '</div>\n        <script src="/static/client.js"></script>\n      </body>\n    </html>\n  ';
+	  return '\n    <!DOCTYPE html>\n    <html lang="zh-CN">\n      <head>\n        <meta charset="utf-8">\n        <title>\u540E\u7AEF\u6E32\u67D3\u6D4B\u8BD5</title>\n        <link rel="stylesheet" href="/static/bundle.css" />\n      </head>\n      <body>\n        <div id="root">' + bodyContent + '</div>\n        <script src="/static/client.js"></script>\n      </body>\n    </html>\n  ';
 	}
 	
 	app.get('/', function (req, res, next) {
@@ -20481,7 +20481,7 @@
 	  _createClass(Home, [{
 	    key: 'render',
 	    value: function render() {
-	      var articles = __ARTICLE_FILES__.split(',').map(function (filename, i) {
+	      var articles = ("async-javascript.json,cc-couple.json,cc-couple2.json,ikea.json,the-forbidden-city.json").split(',').map(function (filename, i) {
 	        return _react2.default.createElement(_article2.default, { key: i, title: filename, displayAsIntro: true });
 	      });
 	
