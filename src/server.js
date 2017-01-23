@@ -7,26 +7,25 @@ import Index from './components/Index';
 
 const app = new Express();
 
-app.use('/static', Express.static(path.resolve(__dirname, '../build')));
+app.use(Express.static(__dirname));
 
 app.get('/', (req, res, next) => {
   var content = renderToString(
-    <ClientLayout>
-      <Home />
-    </ClientLayout>
+    <Layout>
+      <Index />
+    </Layout>
   );
-
   var html =  `
     <!DOCTYPE html>
     <html lang="zh-CN">
       <head>
         <meta charset="utf-8">
         <title>后端渲染测试</title>
-        <link rel="stylesheet" href="/static/bundle.css" />
+        <link rel="stylesheet" href="/build/bundle.css" />
       </head>
       <body>
-        <div id="root">${content}</div>
-        <script src="/static/client.js"></script>
+        <div id="root"></div>
+        <script src="/build/client.js"></script>
       </body>
     </html>
   `;

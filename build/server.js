@@ -72,16 +72,15 @@
 	
 	var app = new _express2.default();
 	
-	app.use('/static', _express2.default.static(_path2.default.resolve(__dirname, '../build')));
+	app.use(_express2.default.static(__dirname));
 	
 	app.get('/', function (req, res, next) {
 	  var content = (0, _server.renderToString)(_react2.default.createElement(
-	    ClientLayout,
+	    _Layout2.default,
 	    null,
-	    _react2.default.createElement(Home, null)
+	    _react2.default.createElement(_Index2.default, null)
 	  ));
-	
-	  var html = '\n    <!DOCTYPE html>\n    <html lang="zh-CN">\n      <head>\n        <meta charset="utf-8">\n        <title>\u540E\u7AEF\u6E32\u67D3\u6D4B\u8BD5</title>\n        <link rel="stylesheet" href="/static/bundle.css" />\n      </head>\n      <body>\n        <div id="root">' + content + '</div>\n        <script src="/static/client.js"></script>\n      </body>\n    </html>\n  ';
+	  var html = '\n    <!DOCTYPE html>\n    <html lang="zh-CN">\n      <head>\n        <meta charset="utf-8">\n        <title>\u540E\u7AEF\u6E32\u67D3\u6D4B\u8BD5</title>\n        <link rel="stylesheet" href="/build/bundle.css" />\n      </head>\n      <body>\n        <div id="root"></div>\n        <script src="/build/client.js"></script>\n      </body>\n    </html>\n  ';
 	
 	  res.send(html);
 	});
@@ -20552,20 +20551,29 @@
 	  _createClass(Article, [{
 	    key: 'render',
 	    value: function render() {
-	      var title = this.props.title || this.props.params.title; //标题         
-	      var test = ("D:\\my\\wangweiyi.github.io\\database\\articles");
-	      var data = !(function webpackMissingModule() { var e = new Error("Cannot find module \".\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()); //数据   
-	      // const displayAsIntro = this.props.displayAsIntro === true; //显示模式：简介 | 全文
-	      // const tags = data.tags.map((tag, i) => { //标签
-	      //   return <a rel="tag" href={tag.link} key={i}>{tag.text}</a>;
-	      // });
-	      // const contentAsHtml = { //正文, 作为html解析并显示
-	      //   __html: displayAsIntro ? data.intro : data.content
-	      // };
+	      var title = this.props.title || this.props.params.title; //标题
+	      var data = __webpack_require__(182)("./" + title); //数据   
+	      var displayAsIntro = this.props.displayAsIntro === true; //显示模式：简介 | 全文
+	      var tags = data.tags.map(function (tag, i) {
+	        //标签
+	        return _react2.default.createElement(
+	          'a',
+	          { rel: 'tag', href: tag.link, key: i },
+	          tag.text
+	        );
+	      });
+	      var contentAsHtml = { //正文, 作为html解析并显示
+	        __html: displayAsIntro ? data.intro : data.content
+	      };
 	
 	      return _react2.default.createElement(
 	        'article',
 	        null,
+	        !data.banner ? '' : _react2.default.createElement(
+	          'div',
+	          { className: _article2.default.articleBanner },
+	          _react2.default.createElement('img', { src: data.banner, alt: '' })
+	        ),
 	        _react2.default.createElement(
 	          'h2',
 	          { className: _article2.default.articconstitle },
@@ -20575,7 +20583,6 @@
 	            data.title
 	          )
 	        ),
-	        '/*',
 	        _react2.default.createElement(
 	          'div',
 	          { className: _article2.default.articleMeta },
@@ -20615,8 +20622,7 @@
 	            { className: _article2.default.articleControlButton, to: "/article/" + title },
 	            '\u9605\u8BFB\u5168\u6587'
 	          )
-	        ) : '',
-	        '*/'
+	        ) : ''
 	      );
 	    }
 	  }]);
@@ -20635,16 +20641,156 @@
 
 /***/ },
 /* 182 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
+	var map = {
+		"./async-javascript": 183,
+		"./async-javascript.json": 183,
+		"./cc-couple": 184,
+		"./cc-couple.json": 184,
+		"./cc-couple2": 185,
+		"./cc-couple2.json": 185,
+		"./ikea": 186,
+		"./ikea.json": 186,
+		"./the-forbidden-city": 187,
+		"./the-forbidden-city.json": 187
+	};
 	function webpackContext(req) {
-		throw new Error("Cannot find module '" + req + "'.");
-	}
-	webpackContext.keys = function() { return []; };
-	webpackContext.resolve = webpackContext;
+		return __webpack_require__(webpackContextResolve(req));
+	};
+	function webpackContextResolve(req) {
+		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
+	};
+	webpackContext.keys = function webpackContextKeys() {
+		return Object.keys(map);
+	};
+	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
 	webpackContext.id = 182;
 
+
+/***/ },
+/* 183 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		"id": "article20161219220108",
+		"title": "Async JavaScript",
+		"banner": "",
+		"pubTime": "2016-12-19",
+		"category": {
+			"text": "",
+			"link": ""
+		},
+		"tags": [
+			{
+				"text": "javascript",
+				"link": "javascript:;"
+			}
+		],
+		"url": "/dist/wfe/article/async-javascript.html",
+		"displayMode": "content",
+		"intro": "<p>最近看了一些JavaScript异步编程方面文章，也反复读了几遍薄薄的《Async JavaScript》。总结一下，供自己后续学习使用，并分享给大家。</p><p>首先，有几个问题。什么是异步编程/异步函数？异步函数和回调函数有什么关系？为什么异步编程经常与JavaScript同时出现？JavaScript中的异步函数的机制是怎样的？那么现在异步编程有什么解决方案？未来的javaScript异步编程是什么样子？如果你对上述几个问题已经虽不至“如数家珍”但已是“一目了然”，那么再往下的内容就不适合你了。那么，我们开始吧~</p>",
+		"content": "<p>最近看了一些JavaScript异步编程方面文章，也反复读了几遍薄薄的《Async JavaScript》。总结一下，供自己后续学习使用，并分享给大家。</p><p>首先，有几个问题。什么是异步编程/异步函数？异步函数和回调函数有什么关系？为什么异步编程经常与JavaScript同时出现？JavaScript中的异步函数的机制是怎样的？那么现在异步编程有什么解决方案？未来的javaScript异步编程是什么样子？如果你对上述几个问题已经虽不至“如数家珍”但已是“一目了然”，那么再往下的内容就不适合你了。那么，我们开始吧~</p><p>最近看了一些JavaScript异步编程方面文章，也反复读了几遍薄薄的《Async JavaScript》。总结一下，供自己后续学习使用，并分享给大家。</p><p>首先，有几个问题。什么是异步编程/异步函数？异步函数和回调函数有什么关系？为什么异步编程经常与JavaScript同时出现？JavaScript中的异步函数的机制是怎样的？那么现在异步编程有什么解决方案？未来的javaScript异步编程是什么样子？如果你对上述几个问题已经虽不至“如数家珍”但已是“一目了然”，那么再往下的内容就不适合你了。那么，我们开始吧~</p><p>最近看了一些JavaScript异步编程方面文章，也反复读了几遍薄薄的《Async JavaScript》。总结一下，供自己后续学习使用，并分享给大家。</p><p>首先，有几个问题。什么是异步编程/异步函数？异步函数和回调函数有什么关系？为什么异步编程经常与JavaScript同时出现？JavaScript中的异步函数的机制是怎样的？那么现在异步编程有什么解决方案？未来的javaScript异步编程是什么样子？如果你对上述几个问题已经虽不至“如数家珍”但已是“一目了然”，那么再往下的内容就不适合你了。那么，我们开始吧~</p><p>最近看了一些JavaScript异步编程方面文章，也反复读了几遍薄薄的《Async JavaScript》。总结一下，供自己后续学习使用，并分享给大家。</p><p>首先，有几个问题。什么是异步编程/异步函数？异步函数和回调函数有什么关系？为什么异步编程经常与JavaScript同时出现？JavaScript中的异步函数的机制是怎样的？那么现在异步编程有什么解决方案？未来的javaScript异步编程是什么样子？如果你对上述几个问题已经虽不至“如数家珍”但已是“一目了然”，那么再往下的内容就不适合你了。那么，我们开始吧~</p><p>最近看了一些JavaScript异步编程方面文章，也反复读了几遍薄薄的《Async JavaScript》。总结一下，供自己后续学习使用，并分享给大家。</p><p>首先，有几个问题。什么是异步编程/异步函数？异步函数和回调函数有什么关系？为什么异步编程经常与JavaScript同时出现？JavaScript中的异步函数的机制是怎样的？那么现在异步编程有什么解决方案？未来的javaScript异步编程是什么样子？如果你对上述几个问题已经虽不至“如数家珍”但已是“一目了然”，那么再往下的内容就不适合你了。那么，我们开始吧~</p><p>最近看了一些JavaScript异步编程方面文章，也反复读了几遍薄薄的《Async JavaScript》。总结一下，供自己后续学习使用，并分享给大家。</p><p>首先，有几个问题。什么是异步编程/异步函数？异步函数和回调函数有什么关系？为什么异步编程经常与JavaScript同时出现？JavaScript中的异步函数的机制是怎样的？那么现在异步编程有什么解决方案？未来的javaScript异步编程是什么样子？如果你对上述几个问题已经虽不至“如数家珍”但已是“一目了然”，那么再往下的内容就不适合你了。那么，我们开始吧~</p>"
+	};
+
+/***/ },
+/* 184 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		"title": "CC couple",
+		"banner": "",
+		"pubTime": "2017-01-17",
+		"category": {
+			"text": "travel",
+			"link": "#"
+		},
+		"tags": [
+			{
+				"text": "fd",
+				"link": "/tags/fd"
+			}
+		],
+		"displayMode": "content",
+		"intro": "<p>The name of cc couple are:</p><ul class=\" list-paddingleft-2\"><li><p>Husband: CC</p></li><li><p>W",
+		"content": "<p>The name of cc couple are:</p><ul class=\" list-paddingleft-2\"><li><p>Husband: CC</p></li><li><p>Wife: Cathy</p></li></ul>"
+	};
+
+/***/ },
+/* 185 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		"title": "CC couple2\n",
+		"banner": "",
+		"pubTime": "2017-01-17\n",
+		"category": {
+			"text": "travel",
+			"link": "#"
+		},
+		"tags": [
+			{
+				"text": "fd222",
+				"link": "/tags/fd222"
+			}
+		],
+		"displayMode": "content",
+		"intro": "<p>The name of cc couple are:</p><ul class=\" list-paddingleft-2\"><li><p>Husband: CC</p></li><li><p>W",
+		"content": "<p>The name of cc couple are:</p><ul class=\" list-paddingleft-2\"><li><p>Husband: CC</p></li><li><p>Wife: Cathy</p></li></ul>"
+	};
+
+/***/ },
+/* 186 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		"title": "IKEA",
+		"banner": "http://ecma.bdimg.com/lego-mat/new_avatar_a8bfa708-0037-4c4d-8806-cc01fe7c47cc.jpg",
+		"pubTime": "2017-01-05",
+		"category": {
+			"text": "",
+			"link": ""
+		},
+		"tags": [
+			{
+				"text": "家居",
+				"link": "javascript:;"
+			}
+		],
+		"displayMode": "content",
+		"intro": "<h1 style=\"text-align: center;\">逛宜家</h1><p style=\"margin-left: 40px;\">今天是周六，天气不好，只能在室内活动。于是和老公决定去逛宜家。</p><p style=\"margin-left: 40px;\"><img alt=\"Image\" width=\"1060\" height=\"666\" src=\"http://ecma.bdimg.com/lego-mat/new_avatar_a8bfa708-0037-4c4d-8806-cc01fe7c47cc.jpg\"><br></p><p style=\"margin-left: 40px;\">人还是比较多，<b>不过倒也热闹，有节日的氛围</b>。<br></p><p style=\"margin-left: 40px; text-align: center;\"><span style=\"font-size: 1.25em; color: rgb(65, 140, 175);\">十分喜欢宜家简洁、清新的设计风格，以后自己的家就这么设计！</span></p>",
+		"content": "<h1 style=\"text-align: center;\">逛宜家</h1><p style=\"margin-left: 40px;\">今天是周六，天气不好，只能在室内活动。于是和老公决定去逛宜家。</p><p style=\"margin-left: 40px;\"><img alt=\"Image\" width=\"1060\" height=\"666\" src=\"http://ecma.bdimg.com/lego-mat/new_avatar_a8bfa708-0037-4c4d-8806-cc01fe7c47cc.jpg\"><br></p><p style=\"margin-left: 40px;\">人还是比较多，<b>不过倒也热闹，有节日的氛围</b>。<br></p><p style=\"margin-left: 40px; text-align: center;\"><span style=\"font-size: 1.25em; color: rgb(65, 140, 175);\">十分喜欢宜家简洁、清新的设计风格，以后自己的家就这么设计！</span></p><h1 style=\"text-align: center;\">逛宜家</h1><p style=\"margin-left: 40px;\">今天是周六，天气不好，只能在室内活动。于是和老公决定去逛宜家。</p><p style=\"margin-left: 40px;\"><img alt=\"Image\" width=\"1060\" height=\"666\" src=\"http://ecma.bdimg.com/lego-mat/new_avatar_a8bfa708-0037-4c4d-8806-cc01fe7c47cc.jpg\"><br></p><p style=\"margin-left: 40px;\">人还是比较多，<b>不过倒也热闹，有节日的氛围</b>。<br></p><p style=\"margin-left: 40px; text-align: center;\"><span style=\"font-size: 1.25em; color: rgb(65, 140, 175);\">十分喜欢宜家简洁、清新的设计风格，以后自己的家就这么设计！</span></p><h1 style=\"text-align: center;\">逛宜家</h1><p style=\"margin-left: 40px;\">今天是周六，天气不好，只能在室内活动。于是和老公决定去逛宜家。</p><p style=\"margin-left: 40px;\"><img alt=\"Image\" width=\"1060\" height=\"666\" src=\"http://ecma.bdimg.com/lego-mat/new_avatar_a8bfa708-0037-4c4d-8806-cc01fe7c47cc.jpg\"><br></p><p style=\"margin-left: 40px;\">人还是比较多，<b>不过倒也热闹，有节日的氛围</b>。<br></p><p style=\"margin-left: 40px; text-align: center;\"><span style=\"font-size: 1.25em; color: rgb(65, 140, 175);\">十分喜欢宜家简洁、清新的设计风格，以后自己的家就这么设计！</span></p><h1 style=\"text-align: center;\">逛宜家</h1><p style=\"margin-left: 40px;\">今天是周六，天气不好，只能在室内活动。于是和老公决定去逛宜家。</p><p style=\"margin-left: 40px;\"><img alt=\"Image\" width=\"1060\" height=\"666\" src=\"http://ecma.bdimg.com/lego-mat/new_avatar_a8bfa708-0037-4c4d-8806-cc01fe7c47cc.jpg\"><br></p><p style=\"margin-left: 40px;\">人还是比较多，<b>不过倒也热闹，有节日的氛围</b>。<br></p><p style=\"margin-left: 40px; text-align: center;\"><span style=\"font-size: 1.25em; color: rgb(65, 140, 175);\">十分喜欢宜家简洁、清新的设计风格，以后自己的家就这么设计！</span></p>"
+	};
+
+/***/ },
+/* 187 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		"id": "article20161219102830",
+		"title": "故宫",
+		"banner": "",
+		"pubTime": "2016-12-19",
+		"category": {
+			"text": "",
+			"link": ""
+		},
+		"tags": [
+			{
+				"text": "北京",
+				"link": "javascript:;"
+			},
+			{
+				"text": "古建筑",
+				"link": "javascript:;"
+			}
+		],
+		"url": "/dist/wfe/article/async-javascript.html",
+		"displayMode": "content",
+		"intro": "<p>故宫是一直向往的神圣之地，风景很美。故宫的建筑群保存得非常完好，无论是恢宏的气势、绝佳的建筑，还是深厚的历史文化底蕴都让人印象深刻。天气好的时候看得更加真切。</p><p>北京故宫，旧称紫禁城，是中国明清两代24位皇帝的皇宫。是无与伦比的古代建筑杰作，也是世界现存最大、最完整的木质结构的古建筑群。故宫宫殿建筑均是木结构、黄琉璃瓦顶、青白石底座，饰以金碧辉煌的彩画...</p>",
+		"content": "<p>故宫是一直向往的神圣之地，风景很美。故宫的建筑群保存得非常完好，无论是恢宏的气势、绝佳的建筑，还是深厚的历史文化底蕴都让人印象深刻。天气好的时候看得更加真切。</p><p>北京故宫，旧称紫禁城，是中国明清两代24位皇帝的皇宫。是无与伦比的古代建筑杰作，也是世界现存最大、最完整的木质结构的古建筑群。故宫宫殿建筑均是木结构、黄琉璃瓦顶、青白石底座，饰以金碧辉煌的彩画。被誉为世界五大宫之一（北京故宫、法国凡尔赛宫、英国白金汉宫、美国白宫、俄罗斯克里姆林宫）。故宫的建筑沿着一条南北向中轴线排列并向两旁展开，南北取直，左右对称。依据其布局与功用分为“外朝”与“内廷”两大部分，以乾清门为界，乾清门以南为外朝，以北为内廷。外朝、内廷的建筑气氛迥然不同。故宫有4个门，正门名午门，东门名东华门，西门名西华门，北门名神武门。面对北门神武门，有用土、石筑成的景山，满山松柏成林。外朝以太和殿、中和殿、保和殿三大殿为中心，其中三大殿中的“太和殿”俗称“金銮殿”，是皇帝举行朝会的地方，也称为“前朝”。是封建皇帝行使权力、举行盛典的地方。此外两翼东有文华殿、文渊阁、上驷院、南三所；西有武英殿、内务府等建筑。建筑造型宏伟壮丽，庭院明朗开阔，象征封建政权至高无上。内廷以乾清宫、交泰殿、坤宁宫后三宫为中心，两翼为养心殿、东六宫、西六宫、斋宫、毓庆宫，后有御花园。是封建帝王与后妃居住之所。内廷东部的宁寿宫是当年乾隆皇帝退位后养老而修建。内廷西部有慈宁宫、寿安宫等。此外还有重华宫，北五所等建筑。庭院深邃，建筑紧凑，自成一体，秩序井然。</p><p>景点类型：公园历史建筑历史遗址</p><p>最佳季节：四季皆宜。春季气候舒适，在故宫赏花是不错的选择；夏季炎热，可在室内参观；秋季，北京秋高气爽，红叶满地，游览故宫非常合适；冬季虽然寒冷，但是故宫的雪景确实美不胜收。</p><p><strong>建议游玩：</strong>3-4小时</p><p>门票：旺季（4月1日~10月31日）：60.00元淡季（11月1日~3月31日）：40.00元珍宝馆（即进入宁寿宫区，含戏曲馆、石鼓馆）：10.00元钟表馆（即进入奉先殿区）：10.00元</p><p>开放时间：1.旺季（4月1日~10月31日）：08:30~17:00停止售票时间：16:00停止入场时间：16:102.淡季（11月1日~3月31日）：08:30~16:30停止售票时间：15:30停止入场时间：15:40Tips：除法定节假日和暑期（7月1日~8月31日）外，故宫博物院全年实行周一下午闭馆的措施。每周一开馆时间为08:30~12:00，停止售票时间为11:00，停止</p><p>检票时间为11:10，闭馆时间为12:00。</p><p>地址：北京市东城区景山前街4号</p><p>电话：86-10-85007422,85007421</p>"
+	};
 
 /***/ }
 /******/ ]);
