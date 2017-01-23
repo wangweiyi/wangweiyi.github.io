@@ -1,19 +1,42 @@
 {
-  "name": "cathy",
-  "version": "0.2.0",
-  "description": "cathy's website",
-  "main": "/react/dist/bundle.js",
+  "name": "cathy-site-by-react",
+  "version": "0.1.0",
+  "description": "cathy's website build with react, webpack, express and es6",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf build && webpack --progress --colors",
+    "start": "supervisor ./build/server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wangweiyi/wangweiyi.github.io.git"
-  },
+  "keywords": [
+    "cathy",
+    "react"
+  ],
   "author": "cathy",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/wangweiyi/wangweiyi.github.io/issues"
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-env": "^1.1.8",
+    "style-loader": "^0.13.1",
+    "css-loader": "^0.26.1",
+    "file-loader": "^0.9.0",
+    "json-loader": "^0.5.4",
+    "url-loader": "^0.5.7",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
   },
-  "homepage": "https://github.com/wangweiyi/wangweiyi.github.io#readme"
+  "dependencies": {
+    "express": "^4.14.0",
+    "body-parser": "^1.15.2",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-router": "^3.0.0"
+  }
 }

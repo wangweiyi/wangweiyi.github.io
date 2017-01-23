@@ -1,0 +1,5 @@
+{
+  "name": "article",
+  "description": "one article",
+  "main": "article.js"
+}

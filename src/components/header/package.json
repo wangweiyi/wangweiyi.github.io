@@ -1,0 +1,5 @@
+{
+  "name": "header",
+  "description": "header section of the page",
+  "main": "header.js"
+}
