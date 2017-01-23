@@ -1,7 +1,7 @@
 // 前端页面结构
 import React from 'react';
 import Header from '../header';
-import style from './clientLayout.less';
+import style from './layout.less';
 
 class ClientLayout extends React.Component {
   constructor(props) {

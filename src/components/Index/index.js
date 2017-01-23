@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Article from '../article';
+import Article from '../Article';
 
 class Home extends React.Component {
   constructor(props) {

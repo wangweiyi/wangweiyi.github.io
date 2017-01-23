@@ -7,7 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const paths = {
   context: __dirname,
   output: path.resolve(__dirname, 'build'),
-  articles: path.resolve(__dirname, 'database/articles'),
+  articleFloder: path.resolve(__dirname, 'database/articles'),
 };
 
 // 排除 node_modules 目录里的模块
@@ -72,7 +72,8 @@ const baseConfiguration = {
       allChunks: true
     }),
     new webpack.DefinePlugin({
-      '__ARTICLE_FILES__': JSON.stringify(fs.readdirSync(paths.articles).join(','))
+      __ARTICLE_FOLDER__: JSON.stringify(paths.articleFloder),
+      __ARTICLE_FILES__: JSON.stringify(fs.readdirSync(paths.articleFloder).join(','))
     })
   ]
 };

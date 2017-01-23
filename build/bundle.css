@@ -662,17 +662,17 @@ h6,
 a {
   text-decoration: none;
 }
-a.clientLayout--active--2JOJC,
+a.layout--active--2LvkT,
 a:hover {
   color: #f47e00;
 }
-.clientLayout--icon--TzOKa {
+.layout--icon--2H9z1 {
   position: relative;
   top: -2px;
   margin-right: 5px;
   font: normal 12px/1 iconfont;
 }
-.clientLayout--site-main--2yn64 {
+.layout--site-main--2_BnY {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -681,11 +681,84 @@ a:hover {
   min-height: 600px;
 }
 /* footer */
-.clientLayout--site-footer--2vOBM {
+.layout--site-footer--30-B1 {
   padding: 20px 0;
   color: #aaa;
   text-align: center;
   border-top: 1px solid #eee;
+}
+article {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eee;
+}
+article:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+.article--article-banner--2TbBx {
+  margin-bottom: 40px;
+}
+.article--article-banner--2TbBx img {
+  width: 100%;
+  border-radius: 10px;
+}
+.article--article-title--2lBXm {
+  font-size: 28px;
+}
+.article--article-meta--1DJoz {
+  font-family: 'mixFont Sans-Serif', sans-serif;
+}
+.article--article-meta-item--3wQcl {
+  margin-right: 18px;
+  color: #666;
+  font-size: 12px;
+}
+.article--article-meta-item--3wQcl [rel=tag] {
+  margin-left: 8px;
+}
+.article--article-meta-item--3wQcl [rel=tag]:first-child {
+  margin-left: 0;
+}
+@media screen and (max-width: 480px) {
+  .article--article-meta-item--3wQcl {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+.article--article-meta-item--3wQcl a {
+  padding-bottom: 1px;
+  color: #222;
+  border-bottom: 1px dotted #ccc;
+}
+.article--article-meta-item--3wQcl a:hover {
+  color: #f47e00;
+}
+.article--article-content--1Zgz6 {
+  margin-top: 24px;
+}
+.article--article-content--1Zgz6 p {
+  margin: 1.2em 0;
+}
+.article--article-content--1Zgz6 h4 {
+  padding-top: 40px;
+}
+.article--article-control--2x0zR {
+  margin-top: 25px;
+}
+.article--article-control-button--1NDZV {
+  display: inline-block;
+  line-height: 38px;
+  padding: 0 30px;
+  color: #f47e00;
+  border: 1px solid #f47e00;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.article--article-control-button--1NDZV:hover {
+  color: #fff;
+  background: #f47e00;
 }
 article {
   margin-bottom: 40px;
