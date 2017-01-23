@@ -2,23 +2,21 @@ import Express from 'express';
 import path from 'path';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-
-import ClientLayout from './components/clientLayout';
-import Home from './components/home';
+import Layout from './components/Layout';
+import Index from './components/Index';
 
 const app = new Express();
 
 app.use('/static', Express.static(path.resolve(__dirname, '../build')));
 
-
-function generateHtml(contentComponent) {
-  const bodyContent = renderToString(
+app.get('/', (req, res, next) => {
+  var content = renderToString(
     <ClientLayout>
-      {contentComponent}
+      <Home />
     </ClientLayout>
   );
 
-  return `
+  var html =  `
     <!DOCTYPE html>
     <html lang="zh-CN">
       <head>
@@ -27,15 +25,21 @@ function generateHtml(contentComponent) {
         <link rel="stylesheet" href="/static/bundle.css" />
       </head>
       <body>
-        <div id="root">${bodyContent}</div>
+        <div id="root">${content}</div>
         <script src="/static/client.js"></script>
       </body>
     </html>
   `;
-}
 
-app.get('/', (req, res, next) => {
-  res.send(generateHtml(<Home />));
+  res.send(html);
+});
+
+app.get('/article/new', (req, res, next) => {
+  res.send('new');
+});
+
+app.get('/article/:param', (req, res, next) => {
+  res.send(req.param);
 });
 
 // 启动服务器
